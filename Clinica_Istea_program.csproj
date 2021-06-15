@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft Visual Basic 2005 Power Packs\3.0\Microsoft.VisualBasic.PowerPacks.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="altaEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="gestionEspecialidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="gestionMateriales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="gestionPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="detalleDepartamento.cs" />
+    <Compile Update="altaMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="cambiarContra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ingreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="detalleEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="panelMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="gestionEmpleado - Copia.resx">
+      <DependentUpon>gestionPersonal.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

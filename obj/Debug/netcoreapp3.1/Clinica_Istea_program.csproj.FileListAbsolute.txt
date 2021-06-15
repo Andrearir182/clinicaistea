@@ -1,0 +1,96 @@
+C:\Users\ASUS\source\repos\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Clinica_Istea_program.exe
+C:\Users\ASUS\source\repos\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Clinica_Istea_program.deps.json
+C:\Users\ASUS\source\repos\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Clinica_Istea_program.runtimeconfig.json
+C:\Users\ASUS\source\repos\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Clinica_Istea_program.runtimeconfig.dev.json
+C:\Users\ASUS\source\repos\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Clinica_Istea_program.dll
+C:\Users\ASUS\source\repos\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Clinica_Istea_program.pdb
+C:\Users\ASUS\source\repos\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\ASUS\source\repos\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\ASUS\source\repos\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.csprojAssemblyReference.cache
+C:\Users\ASUS\source\repos\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.Ingreso.resources
+C:\Users\ASUS\source\repos\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.Properties.Resources.resources
+C:\Users\ASUS\source\repos\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.csproj.GenerateResource.cache
+C:\Users\ASUS\source\repos\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.AssemblyInfoInputs.cache
+C:\Users\ASUS\source\repos\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.AssemblyInfo.cs
+C:\Users\ASUS\source\repos\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.csproj.CopyComplete
+C:\Users\ASUS\source\repos\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.dll
+C:\Users\ASUS\source\repos\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.pdb
+C:\Users\ASUS\source\repos\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.genruntimeconfig.cache
+C:\Users\ASUS\source\repos\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.panelMenu.resources
+C:\Users\ASUS\source\repos\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.claveRecup.resources
+C:\Users\ASUS\Downloads\Clinica_Istea_program\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Clinica_Istea_program.exe
+C:\Users\ASUS\Downloads\Clinica_Istea_program\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Clinica_Istea_program.deps.json
+C:\Users\ASUS\Downloads\Clinica_Istea_program\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Clinica_Istea_program.runtimeconfig.json
+C:\Users\ASUS\Downloads\Clinica_Istea_program\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Clinica_Istea_program.runtimeconfig.dev.json
+C:\Users\ASUS\Downloads\Clinica_Istea_program\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Clinica_Istea_program.dll
+C:\Users\ASUS\Downloads\Clinica_Istea_program\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Clinica_Istea_program.pdb
+C:\Users\ASUS\Downloads\Clinica_Istea_program\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\ASUS\Downloads\Clinica_Istea_program\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\ASUS\Downloads\Clinica_Istea_program\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.cambiarContra.resources
+C:\Users\ASUS\Downloads\Clinica_Istea_program\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.claveRecup.resources
+C:\Users\ASUS\Downloads\Clinica_Istea_program\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.ingreso.resources
+C:\Users\ASUS\Downloads\Clinica_Istea_program\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.panelMenu.resources
+C:\Users\ASUS\Downloads\Clinica_Istea_program\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.Properties.Resources.resources
+C:\Users\ASUS\Downloads\Clinica_Istea_program\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.csproj.GenerateResource.cache
+C:\Users\ASUS\Downloads\Clinica_Istea_program\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.AssemblyInfoInputs.cache
+C:\Users\ASUS\Downloads\Clinica_Istea_program\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.AssemblyInfo.cs
+C:\Users\ASUS\Downloads\Clinica_Istea_program\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Downloads\Clinica_Istea_program\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.csproj.CopyComplete
+C:\Users\ASUS\Downloads\Clinica_Istea_program\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.dll
+C:\Users\ASUS\Downloads\Clinica_Istea_program\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.pdb
+C:\Users\ASUS\Downloads\Clinica_Istea_program\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.genruntimeconfig.cache
+C:\Users\ASUS\Downloads\Clinica_Istea_program\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.csprojAssemblyReference.cache
+C:\Users\ASUS\Downloads\Nueva carpeta (4)\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Clinica_Istea_program.exe
+C:\Users\ASUS\Downloads\Nueva carpeta (4)\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Clinica_Istea_program.deps.json
+C:\Users\ASUS\Downloads\Nueva carpeta (4)\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Clinica_Istea_program.runtimeconfig.json
+C:\Users\ASUS\Downloads\Nueva carpeta (4)\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Clinica_Istea_program.runtimeconfig.dev.json
+C:\Users\ASUS\Downloads\Nueva carpeta (4)\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Clinica_Istea_program.dll
+C:\Users\ASUS\Downloads\Nueva carpeta (4)\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Clinica_Istea_program.pdb
+C:\Users\ASUS\Downloads\Nueva carpeta (4)\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\ASUS\Downloads\Nueva carpeta (4)\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\ASUS\Downloads\Nueva carpeta (4)\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.csprojAssemblyReference.cache
+C:\Users\ASUS\Downloads\Nueva carpeta (4)\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.cambiarContra.resources
+C:\Users\ASUS\Downloads\Nueva carpeta (4)\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.claveRecup.resources
+C:\Users\ASUS\Downloads\Nueva carpeta (4)\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.ingreso.resources
+C:\Users\ASUS\Downloads\Nueva carpeta (4)\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.panelMenu.resources
+C:\Users\ASUS\Downloads\Nueva carpeta (4)\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.Properties.Resources.resources
+C:\Users\ASUS\Downloads\Nueva carpeta (4)\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.csproj.GenerateResource.cache
+C:\Users\ASUS\Downloads\Nueva carpeta (4)\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.AssemblyInfoInputs.cache
+C:\Users\ASUS\Downloads\Nueva carpeta (4)\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.AssemblyInfo.cs
+C:\Users\ASUS\Downloads\Nueva carpeta (4)\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Downloads\Nueva carpeta (4)\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.csproj.CopyComplete
+C:\Users\ASUS\Downloads\Nueva carpeta (4)\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.dll
+C:\Users\ASUS\Downloads\Nueva carpeta (4)\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.pdb
+C:\Users\ASUS\Downloads\Nueva carpeta (4)\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.genruntimeconfig.cache
+C:\Users\ASUS\Downloads\Nueva carpeta (4)\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.detalleDepartamento.resources
+C:\Users\ASUS\Downloads\Nueva carpeta (4)\Clinica_Istea_program\obj\Debug\netcoreapp3.1\WinForms1.DetalleEmpleado.resources
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Clinica_Istea_program.exe
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Clinica_Istea_program.deps.json
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Clinica_Istea_program.runtimeconfig.json
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Clinica_Istea_program.runtimeconfig.dev.json
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Clinica_Istea_program.dll
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Clinica_Istea_program.pdb
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\bin\Debug\netcoreapp3.1\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.cambiarContra.resources
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.claveRecup.resources
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.detalleDepartamento.resources
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.ingreso.resources
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.panelMenu.resources
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.Properties.Resources.resources
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.csproj.GenerateResource.cache
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.AssemblyInfoInputs.cache
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.AssemblyInfo.cs
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.csproj.CopyComplete
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.dll
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.pdb
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.genruntimeconfig.cache
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.csprojAssemblyReference.cache
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.altaMaterial.resources
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.detalleEmpleado.resources
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.gestionEspecialidades.resources
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.gestionMateriales.resources
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.gestionEmpleado - Copia.resources
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.gestionPersonal.resources
