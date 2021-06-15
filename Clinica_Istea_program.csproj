@@ -16,6 +16,9 @@
     <Compile Update="altaEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="altaEspecialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="gestionEspecialidades.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -94,3 +94,5 @@ C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug
 C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.gestionMateriales.resources
 C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.gestionEmpleado - Copia.resources
 C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.gestionPersonal.resources
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.altaEmpleado.resources
+C:\Users\ASUS\Downloads\Clinica_Istea_program v3\Clinica_Istea_program\obj\Debug\netcoreapp3.1\Clinica_Istea_program.altaEspecialidad.resources

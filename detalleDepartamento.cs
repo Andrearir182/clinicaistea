@@ -3,93 +3,161 @@ using System;
 using System.Drawing;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Clinica_Istea_program
 {
     public partial class detalleDepartamento : Form
     {
-        public Especialidad Dep { get; set; }
-
-        public detalleDepartamento(string DepName)
+        public Especialidad esp { get; set; }
+        public detalleDepartamento(Especialidad d)
         {
-
             InitializeComponent();
-            Dep = new Especialidad() { Nombre = DepName };
-
-            foreach (string s in ClinicaDBContext.GetMateriales()) { 
-                comboBoxBuscar.Items.Add(s);
-            }
+            esp = d;
+            lblTitulo.Text = "DETALLE " + d.Nombre.ToUpper();
             while (this.flowLayoutPanelDetalleDep.Controls.Count > 0)
             {
                 this.flowLayoutPanelDetalleDep.Controls.RemoveAt(0);
             }
-            //falta modificar el metodo "BuscarMaterialesDepartamento" para que busque por departamento
-            foreach (Material m in ClinicaDBContext.BuscarMaterialesDepartamento("Pediatria"))
+            MessageBox.Show(d.Nombre);
+            foreach (string s in ClinicaDBContext.GetMateriales(d)) { 
+                comboBoxBuscar.Items.Add(s);
+            }
+
+            foreach (Material m in ClinicaDBContext.Materiales.Where(x=>x.Dep==d).ToList())
             {
-                FlowLayoutPanel fp = new FlowLayoutPanel() { FlowDirection = System.Windows.Forms.FlowDirection.LeftToRight, Size = new System.Drawing.Size(378, 20) };
-                    fp.Controls.Add(new TextBox(){
-                        Text="Producto",
-                        BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80))))),
-                        BorderStyle = System.Windows.Forms.BorderStyle.None,
-                        Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
-                        Enabled = false,
-                        ForeColor = System.Drawing.Color.Silver,
-                        Margin = new System.Windows.Forms.Padding(3, 2, 3, 2),
-                        Size = new System.Drawing.Size(89, 20),
-                        TabIndex = 13
+                FlowLayoutPanel fp1 = new FlowLayoutPanel() { FlowDirection = System.Windows.Forms.FlowDirection.LeftToRight, Size = new System.Drawing.Size(398, 20) };
+                fp1.Controls.Add(new Label()
+                {
+                    Text = "Nombre",
+                    BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80))))),
+                    BorderStyle = System.Windows.Forms.BorderStyle.None,
+                    Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
+                    ForeColor = System.Drawing.Color.Silver,
+                    Margin = new System.Windows.Forms.Padding(3, 2, 3, 2),
+                    Size = new System.Drawing.Size(49, 20)
 
-                    });
-                    fp.Controls.Add(new TextBox() { 
-                        Text = m.Producto,
-                        Enabled = false,
-                        BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80))))),
-                        BorderStyle = System.Windows.Forms.BorderStyle.None,
-                        Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
-                        ForeColor = System.Drawing.Color.Silver,
-                        Location = new System.Drawing.Point(130, 12),
-                        Margin = new System.Windows.Forms.Padding(3, 2, 3, 2),
-                        Name = "TxtProducto",
-                        Size = new System.Drawing.Size(89, 20),
-                        TabIndex = 22
-                    });
-                    fp.Controls.Add(new TextBox(){
-                        Text="Cantidad",
-                        BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80))))),
-                        BorderStyle = System.Windows.Forms.BorderStyle.None,
-                        Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
-                        Enabled = false,
-                        ForeColor = System.Drawing.Color.Silver,
-                        Margin = new System.Windows.Forms.Padding(3, 2, 3, 2),
-                        Size = new System.Drawing.Size(89, 20),
-                        TabIndex = 20
-                    });
-                    //falta hacer que funcione, actualmente no esta agregando el control NumericUpDown
-                    fp.Controls.Add(new NumericUpDown() {
-                        Name = "numericUpDownCant",
-                        Size = new System.Drawing.Size(89, 23),
-                        TabIndex = 21,
-                        Minimum = 0,
-                        Maximum = 999999999999999
-                        //ValueChanged += new System.EventHandler(actualizarCantidad)
-                    });
-                    this.flowLayoutPanelDetalleDep.Controls.Add(fp);
+                });
+                fp1.Controls.Add(new Label()
+                {
+                    Text = m.Producto,
+                    BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80))))),
+                    BorderStyle = System.Windows.Forms.BorderStyle.None,
+                    Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
+                    ForeColor = System.Drawing.Color.Silver,
+                    Margin = new System.Windows.Forms.Padding(3, 2, 3, 2),
+                    Size = new System.Drawing.Size(119, 20)
+                });
+                fp1.Controls.Add(new Label()
+                {
+                    Text = "Cantidad",
+                    BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80))))),
+                    BorderStyle = System.Windows.Forms.BorderStyle.None,
+                    Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
+                    ForeColor = System.Drawing.Color.Silver,
+                    Margin = new System.Windows.Forms.Padding(3, 2, 3, 2),
+                    Size = new System.Drawing.Size(49, 20)
+                });
+                NumericUpDown b = new NumericUpDown()
+                {
+                    Text = "Ver",
+                    Name = m.Producto,
+                    Maximum= 999999999999999,
+                    Minimum= 0,
+                    Value = Convert.ToDecimal(m.Cantidad),
+                    BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73))))),
+                    Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
+                    ForeColor = System.Drawing.Color.Silver,
+                    Margin = new System.Windows.Forms.Padding(3, 2, 3, 2),
+                    Size = new System.Drawing.Size(89, 20)
+                };
+                b.ValueChanged += ActualizarCant;
+                fp1.Controls.Add(b);
 
+                this.flowLayoutPanelDetalleDep.Controls.Add(fp1);
+
+                void ActualizarCant(object sender, EventArgs e)
+                {
+                    ClinicaDBContext.Materiales.Where(x => x.Producto == b.Name && x.Dep == d).FirstOrDefault().Cantidad=Convert.ToInt32(b.Value);
+                }
             }
         }
 
-        //Este metodo deberi invocarse en el "ValueChanged" de NumericUpDown que actualmente no lo agrega
+        private void recargarListado(object sender, EventArgs e)
+        {
+            while (this.flowLayoutPanelDetalleDep.Controls.Count > 0)
+            {
+                this.flowLayoutPanelDetalleDep.Controls.RemoveAt(0);
+            }
 
-        //private void actualizarCantidad(object sender, EventArgs e)
-        //{
-        //    ClinicaDBContext.actualizarCantidad(Dep, TxtProducto.Text, Convert.ToInt32(numericUpDownCant.Value));
-        //}
+            string Texto = comboBoxBuscar.Text.ToUpper();
+            List<Material> MaterialesSeleccionados = ClinicaDBContext.Materiales.Where(z => (z.Producto != null && z.Producto.ToUpper().Contains(Texto))).ToList();
+            foreach (Material m in MaterialesSeleccionados)
+            {
+                FlowLayoutPanel fp1 = new FlowLayoutPanel() { FlowDirection = System.Windows.Forms.FlowDirection.LeftToRight, Size = new System.Drawing.Size(398, 20) };
+                fp1.Controls.Add(new Label()
+                {
+                    Text = "Nombre",
+                    BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80))))),
+                    BorderStyle = System.Windows.Forms.BorderStyle.None,
+                    Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
+                    ForeColor = System.Drawing.Color.Silver,
+                    Margin = new System.Windows.Forms.Padding(3, 2, 3, 2),
+                    Size = new System.Drawing.Size(49, 20)
 
+                });
+                fp1.Controls.Add(new Label()
+                {
+                    Text = m.Producto,
+                    BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80))))),
+                    BorderStyle = System.Windows.Forms.BorderStyle.None,
+                    Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
+                    ForeColor = System.Drawing.Color.Silver,
+                    Margin = new System.Windows.Forms.Padding(3, 2, 3, 2),
+                    Size = new System.Drawing.Size(119, 20)
+                });
+                fp1.Controls.Add(new Label()
+                {
+                    Text = "Cantidad",
+                    BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80))))),
+                    BorderStyle = System.Windows.Forms.BorderStyle.None,
+                    Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
+                    ForeColor = System.Drawing.Color.Silver,
+                    Margin = new System.Windows.Forms.Padding(3, 2, 3, 2),
+                    Size = new System.Drawing.Size(49, 20)
+                });
+                NumericUpDown b = new NumericUpDown()
+                {
+                    Text = "Ver",
+                    Name = m.Producto,
+                    Maximum = 999999999999999,
+                    Minimum = 0,
+                    Value = Convert.ToDecimal(m.Cantidad),
+                    BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73))))),
+                    Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
+                    ForeColor = System.Drawing.Color.Silver,
+                    Margin = new System.Windows.Forms.Padding(3, 2, 3, 2),
+                    Size = new System.Drawing.Size(89, 20)
+                };
+                b.ValueChanged += ActualizarCant;
+                fp1.Controls.Add(b);
+
+                this.flowLayoutPanelDetalleDep.Controls.Add(fp1);
+
+                void ActualizarCant(object sender, EventArgs e)
+                {
+                    ClinicaDBContext.Materiales.Where(x => x.Producto == b.Name && x.Dep == esp).FirstOrDefault().Cantidad = Convert.ToInt32(b.Value);
+                }
+            }
+        }
+        
         public static AutoCompleteStringCollection Autocomplete(string texto)
         {
             AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
-            foreach (Especialidad Dpto in ClinicaDBContext.BuscarDepartamento(texto))
+            foreach (Material m in ClinicaDBContext.Materiales.Where(x => x.Producto.Contains(texto)).ToList())
             {
-                coleccion.Add(Dpto.Nombre);
+                coleccion.Add(m.Producto);
             }
             return coleccion;
         }
@@ -104,9 +172,9 @@ namespace Clinica_Istea_program
             this.Close();
         }
 
-        private void nuevoMaterial(object sender, EventArgs e)
+        private void nuevaEspecialidad(object sender, EventArgs e)
         {
-            altaMaterial n = new altaMaterial();
+            altaEspecialidad n = new altaEspecialidad();
             n.Show();
         }
     }

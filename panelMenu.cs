@@ -18,22 +18,7 @@ namespace Clinica_Istea_program
         {
 
         }
-        private void buttonEspecialidades_Click(object sender, EventArgs e)
-        {
 
-        }
-        private void buttonEspecialidades_Click_1(object sender, EventArgs e)
-        {
-
-        }
-        private void buttonMateriales_Click(object sender, EventArgs e)
-        {
-            //esta llamada deberia redireccionarse a pantalla Departamentos que falta crear
-            //y luego a su vez Departamentos debe hacer esta llamada pasandole 
-            //el  nombre de departamento como string
-            gestionPersonal detalleD = new gestionPersonal();
-            detalleD.Show();
-        }
         private void Cerrar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -44,6 +29,32 @@ namespace Clinica_Istea_program
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void buttonPersonal_Click(object sender, EventArgs e)
+        {
+            irGestionPersonal();
+        }
+        private void buttonEspecialidades_Click_1(object sender, EventArgs e)
+        {
+            irGestionEspecialidades();
+        }
+        private void buttonMateriales_Click(object sender, EventArgs e)
+        {
+            irGestionMateriales();
+        }
+
+        private void irGestionMateriales()
+        {
+            gestionMateriales gm = new gestionMateriales();
+            gm.Show();
+        }
+        private void irGestionEspecialidades() {
+            gestionEspecialidades ge = new gestionEspecialidades();
+            ge.Show();
+        }
+        private void irGestionPersonal() {
+            gestionPersonal gp = new gestionPersonal();
+            gp.Show();
+        }
 
     }
 

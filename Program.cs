@@ -1,6 +1,8 @@
 using Clinica_Istea_program.Models;
 using System;
 using System.Windows.Forms;
+using System.Linq;
+
 
 namespace Clinica_Istea_program
 {
@@ -18,7 +20,11 @@ namespace Clinica_Istea_program
             Application.SetCompatibleTextRenderingDefault(false);
             ingreso PantallaIngreso = new ingreso();
             gestionPersonal prueba = new gestionPersonal();
-            prueba.Show();
+
+            //Especialidad e=ClinicaDBContext.Especialidades.Where(x => x.Nombre == "Cardiologia").FirstOrDefault();
+            //detalleDepartamento d = new detalleDepartamento(e);
+            //prueba.Show();
+            //d.Show();
             PantallaIngreso.Show();
             Application.Run();
         }

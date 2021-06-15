@@ -12,7 +12,11 @@ namespace Clinica_Istea_program
         public altaEmpleado()
         {
             InitializeComponent();
-
+            foreach (string s in ClinicaDBContext.Especialidades.Select(x=>x.Nombre).ToList())
+            {
+                comboBoxBuscar.Items.Add(s);
+            }
+            
         }
         private void BtnCerrar_Click(object sender, EventArgs e)
         {

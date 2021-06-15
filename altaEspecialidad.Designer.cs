@@ -30,11 +30,11 @@ namespace Clinica_Istea_program
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(altaEspecialidad));
-            this.Txtcant = new System.Windows.Forms.TextBox();
+            this.Txtdesc = new System.Windows.Forms.TextBox();
             this.BtnMinimizar = new System.Windows.Forms.PictureBox();
             this.BtnCerrar = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.Txtprod = new System.Windows.Forms.TextBox();
+            this.Txtnombre = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -46,22 +46,21 @@ namespace Clinica_Istea_program
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // Txtcant
+            // Txtdesc
             // 
-            this.Txtcant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
-            this.Txtcant.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txtcant.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Txtcant.ForeColor = System.Drawing.Color.Silver;
-            this.Txtcant.Location = new System.Drawing.Point(275, 86);
-            this.Txtcant.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Txtcant.Name = "Txtcant";
-            this.Txtcant.Size = new System.Drawing.Size(357, 20);
-            this.Txtcant.TabIndex = 20;
-            this.Txtcant.Text = "Descripcion";
-            this.Txtcant.Enter += new System.EventHandler(this.Txtcant_Enter);
-            this.Txtcant.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txtcant_KeyDown);
-            this.Txtcant.KeyUp += new System.Windows.Forms.KeyEventHandler(this.validarSoloNumeros);
-            this.Txtcant.Leave += new System.EventHandler(this.Txtcant_Leave);
+            this.Txtdesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
+            this.Txtdesc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txtdesc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Txtdesc.ForeColor = System.Drawing.Color.Silver;
+            this.Txtdesc.Location = new System.Drawing.Point(275, 86);
+            this.Txtdesc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txtdesc.Name = "Txtdesc";
+            this.Txtdesc.Size = new System.Drawing.Size(357, 20);
+            this.Txtdesc.TabIndex = 20;
+            this.Txtdesc.Text = "Descripcion";
+            this.Txtdesc.Enter += new System.EventHandler(this.Txtcant_Enter);
+            this.Txtdesc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txtdesc_KeyDown);
+            this.Txtdesc.Leave += new System.EventHandler(this.Txtcant_Leave);
             // 
             // BtnMinimizar
             // 
@@ -99,21 +98,21 @@ namespace Clinica_Istea_program
             this.label3.TabIndex = 17;
             this.label3.Text = "AGREGAR ESPECIALIDAD";
             // 
-            // Txtprod
+            // Txtnombre
             // 
-            this.Txtprod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
-            this.Txtprod.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txtprod.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Txtprod.ForeColor = System.Drawing.Color.Silver;
-            this.Txtprod.Location = new System.Drawing.Point(275, 52);
-            this.Txtprod.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Txtprod.Name = "Txtprod";
-            this.Txtprod.Size = new System.Drawing.Size(357, 20);
-            this.Txtprod.TabIndex = 13;
-            this.Txtprod.Text = "Nombre";
-            this.Txtprod.Enter += new System.EventHandler(this.Txtmaterial_Enter);
-            this.Txtprod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txtmaterial_KeyDown);
-            this.Txtprod.Leave += new System.EventHandler(this.Txtmaterial_Leave);
+            this.Txtnombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
+            this.Txtnombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txtnombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Txtnombre.ForeColor = System.Drawing.Color.Silver;
+            this.Txtnombre.Location = new System.Drawing.Point(275, 52);
+            this.Txtnombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txtnombre.Name = "Txtnombre";
+            this.Txtnombre.Size = new System.Drawing.Size(357, 20);
+            this.Txtnombre.TabIndex = 13;
+            this.Txtnombre.Text = "Nombre";
+            this.Txtnombre.Enter += new System.EventHandler(this.Txtmaterial_Enter);
+            this.Txtnombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txtnombre_KeyDown);
+            this.Txtnombre.Leave += new System.EventHandler(this.Txtmaterial_Leave);
             // 
             // btnAdd
             // 
@@ -130,7 +129,7 @@ namespace Clinica_Istea_program
             this.btnAdd.TabIndex = 14;
             this.btnAdd.Text = "AGREGAR";
             this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.agregarMaterial);
+            this.btnAdd.Click += new System.EventHandler(this.agregarEspecialidad);
             // 
             // panel1
             // 
@@ -182,11 +181,11 @@ namespace Clinica_Istea_program
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(675, 207);
-            this.Controls.Add(this.Txtcant);
+            this.Controls.Add(this.Txtdesc);
             this.Controls.Add(this.BtnMinimizar);
             this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.Txtprod);
+            this.Controls.Add(this.Txtnombre);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -206,11 +205,11 @@ namespace Clinica_Istea_program
         }
 
         #endregion
-        private System.Windows.Forms.TextBox Txtcant;
+        private System.Windows.Forms.TextBox Txtdesc;
         private System.Windows.Forms.PictureBox BtnMinimizar;
         private System.Windows.Forms.PictureBox BtnCerrar;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Txtprod;
+        private System.Windows.Forms.TextBox Txtnombre;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;

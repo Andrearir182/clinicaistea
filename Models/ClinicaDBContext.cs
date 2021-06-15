@@ -44,21 +44,37 @@ namespace Clinica_Istea_program.Models
                 Descripcion = " Encargada de patologias cardiologicas"
             };
 
-            Empleado Emp = new Empleado()
-            {
-                Id = 1,
-                Nombre = " Juan Pedro",
-                Apellido = "Lopez",
-                Dni = "1112223333",
-                Matricula = "a55555",
-                Telefono = "1130157777",
-                Email = "drrios@gmail.com",
-                Calle = "mujica 555",
-                Localidad = "caba",
-                Provincia = "Bs As",
-                especialidad = E
-            };
-            Empleados.Add(Emp);
+                Empleado Emp = new Empleado()
+                {
+                    Id = 1,
+                    Nombre = " Juan Pedro",
+                    Apellido = "Lopez",
+                    Dni = "1112223333",
+                    Matricula = "a55555",
+                    Telefono = "1130157777",
+                    Email = "drrios@gmail.com",
+                    Calle = "mujica 555",
+                    Localidad = "caba",
+                    Provincia = "Bs As",
+                    especialidad = E
+                };
+                Empleados.Add(Emp);
+                Material Mat = new Material()
+                {
+                    Dep = E,
+                    Producto = "Gasas",
+                    Cantidad = 300
+
+                };
+                Materiales.Add(Mat);
+                Mat = new Material()
+                {
+                    Dep = E,
+                    Producto = "jeringas",
+                    Cantidad = 200
+
+                };
+                Materiales.Add(Mat);
             Especialidades.Add(E);
 
             E = new Especialidad()
@@ -66,93 +82,44 @@ namespace Clinica_Istea_program.Models
                 Nombre = "Pediatria",
                 Descripcion = " Encargada atencion de chicos"
             };
+                Emp = new Empleado()
+                {
+                    Id = 2,
+                    Nombre = " Andrea Rios",
+                    Dni = "333335555",
+                    Matricula = "b6666",
+                    Telefono = "14488999",
+                    Email = "drandre@gmail.com",
+                    Calle = "tucuman 1235",
+                    Localidad = "caba",
+                    Provincia = "Bs As",
+                    especialidad = E
+                };
+                Empleados.Add(Emp);
+                Mat = new Material()
+                {
+                    Dep = E,
+                    Producto = "Guantes",
+                    Cantidad = 500
+                };
+                Materiales.Add(Mat);
+                Mat = new Material()
+                {
+                    Dep = E,
+                    Producto = "paletas",
+                    Cantidad = 400
 
-            Emp = new Empleado()
-            {
-                Id = 2,
-                Nombre = " Andrea Rios",
-                Dni = "333335555",
-                Matricula = "b6666",
-                Telefono = "14488999",
-                Email = "drandre@gmail.com",
-                Calle = "tucuman 1235",
-                Localidad = "caba",
-                Provincia = "Bs As",
-                especialidad = E
-            };
-            Empleados.Add(Emp);
+                };
+                Materiales.Add(Mat);
+                Mat = new Material()
+                {
+                    Dep = E,
+                    Producto = "reactivos",
+                    Cantidad = 10
+
+                };
+                Materiales.Add(Mat);
             Especialidades.Add(E);
-
-            Especialidad dep = new Especialidad()
-            {
-                Nombre = "Guardia"
-            };
-
-
-            Material Mat = new Material()
-            {
-                Dep = dep,
-                Producto = "Guantes",
-                Cantidad = 500
-            };
-            Materiales.Add(Mat);
-            Especialidades.Add(dep);
-
-            dep = new Especialidad()
-            {
-                Nombre = "Cardiologia"
-            };
-            Mat = new Material()
-            {
-                Dep = dep,
-                Producto = "Gasas",
-                Cantidad = 300
-
-            };
-            Materiales.Add(Mat);
-            Especialidades.Add(dep);
-
-            dep = new Especialidad()
-            {
-                Nombre = "Otorrinolaringologia"
-            };
-            Mat = new Material()
-            {
-                Dep = dep,
-                Producto = "paletas",
-                Cantidad = 400
-
-            };
-            Materiales.Add(Mat);
-            Especialidades.Add(dep);
-
-            dep = new Especialidad()
-            {
-                Nombre = "Pediatria"
-            };
-            Mat = new Material()
-            {
-                Dep = dep,
-                Producto = "jeringas",
-                Cantidad = 200
-
-            };
-            Materiales.Add(Mat);
-            Especialidades.Add(dep);
-
-            dep = new Especialidad()
-            {
-                Nombre = "Terapia"
-            };
-            Mat = new Material()
-            {
-                Dep = dep,
-                Producto = "reactivos",
-                Cantidad = 10
-
-            };
-            Materiales.Add(Mat);
-            Especialidades.Add(dep);
         }
 
         public static bool ValidarUsuario(string Nombre, string Contraseña)
@@ -204,6 +171,10 @@ namespace Clinica_Istea_program.Models
 
             return Materiales.Select(x => x.Producto).ToList();
         }
+        public static List<string> GetMateriales(Especialidad d)
+        {
+            return Materiales.Where(x => x.Dep==d).Select(x => x.Producto).ToList();
+        }
         public static void setlongitudTextoDetDep(int longitud) {
             longitudTextoDetDep = longitud;
         }
@@ -219,6 +190,14 @@ namespace Clinica_Istea_program.Models
             Especialidad dpt = new Especialidad() { Nombre = dept };
             Materiales.Add(new Material() {Dep=dpt,Producto= nombre, Cantidad=cantidad });
         }
+        public static bool existeEspecialidad(string nombre)
+        {
+            return Especialidades.Where(x => x.Nombre == nombre).Any();
+        }
+        public static void addEspecialidad(string nombre, string descripcion)
+        {
+            Especialidades.Add(new Especialidad() { Nombre = nombre, Descripcion= descripcion });
+        }
 
         public static void actualizarCantidad(Especialidad dpto, string producto, int cantidad)
         {
@@ -229,7 +208,11 @@ namespace Clinica_Istea_program.Models
         {
             return Empleados.Where(x => x.Id == id).FirstOrDefault();
         }
-        
+
+        public static Especialidad getEspecialidad(string nombre)
+        {
+            return Especialidades.Where(x => x.Nombre == nombre).FirstOrDefault();
+        }
 
     }
 }

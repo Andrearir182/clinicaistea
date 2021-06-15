@@ -33,28 +33,28 @@ namespace Clinica_Istea_program
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.panelBarraTitulo = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Cerrar = new System.Windows.Forms.PictureBox();
             this.Minimizar = new System.Windows.Forms.PictureBox();
+            this.Cerrar = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelMenu1 = new System.Windows.Forms.Panel();
-            this.linkLabelMiCuenta = new System.Windows.Forms.LinkLabel();
-            this.linkLabelSalir = new System.Windows.Forms.LinkLabel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.buttonEspecialidades = new System.Windows.Forms.Button();
-            this.buttonPersonal = new System.Windows.Forms.Button();
             this.buttonMateriales = new System.Windows.Forms.Button();
+            this.buttonPersonal = new System.Windows.Forms.Button();
+            this.buttonEspecialidades = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.linkLabelSalir = new System.Windows.Forms.LinkLabel();
+            this.linkLabelMiCuenta = new System.Windows.Forms.LinkLabel();
             this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelFormularios = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             this.panelBarraTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).BeginInit();
             this.panelMenu1.SuspendLayout();
             this.PanelContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelFormularios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCerrar
@@ -92,16 +92,17 @@ namespace Clinica_Istea_program
             this.panelBarraTitulo.Size = new System.Drawing.Size(962, 30);
             this.panelBarraTitulo.TabIndex = 0;
             // 
-            // label1
+            // Minimizar
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(20, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "MENU PRINCIPAL";
+            this.Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Minimizar.Image")));
+            this.Minimizar.Location = new System.Drawing.Point(881, 0);
+            this.Minimizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Minimizar.Name = "Minimizar";
+            this.Minimizar.Size = new System.Drawing.Size(43, 30);
+            this.Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Minimizar.TabIndex = 2;
+            this.Minimizar.TabStop = false;
+            this.Minimizar.Click += new System.EventHandler(this.Minimizar_Click);
             // 
             // Cerrar
             // 
@@ -115,17 +116,16 @@ namespace Clinica_Istea_program
             this.Cerrar.TabStop = false;
             this.Cerrar.Click += new System.EventHandler(this.Cerrar_Click);
             // 
-            // Minimizar
+            // label1
             // 
-            this.Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Minimizar.Image")));
-            this.Minimizar.Location = new System.Drawing.Point(881, 0);
-            this.Minimizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Minimizar.Name = "Minimizar";
-            this.Minimizar.Size = new System.Drawing.Size(43, 30);
-            this.Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.Minimizar.TabIndex = 2;
-            this.Minimizar.TabStop = false;
-            this.Minimizar.Click += new System.EventHandler(this.Minimizar_Click);
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(20, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "MENU PRINCIPAL";
             // 
             // panelMenu1
             // 
@@ -142,72 +142,6 @@ namespace Clinica_Istea_program
             this.panelMenu1.Name = "panelMenu1";
             this.panelMenu1.Size = new System.Drawing.Size(249, 420);
             this.panelMenu1.TabIndex = 1;
-            // 
-            // linkLabelMiCuenta
-            // 
-            this.linkLabelMiCuenta.AutoSize = true;
-            this.linkLabelMiCuenta.Location = new System.Drawing.Point(128, 96);
-            this.linkLabelMiCuenta.Name = "linkLabelMiCuenta";
-            this.linkLabelMiCuenta.Size = new System.Drawing.Size(62, 15);
-            this.linkLabelMiCuenta.TabIndex = 3;
-            this.linkLabelMiCuenta.TabStop = true;
-            this.linkLabelMiCuenta.Text = "Mi Cuenta";
-            this.linkLabelMiCuenta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMiCuenta_LinkClicked);
-            // 
-            // linkLabelSalir
-            // 
-            this.linkLabelSalir.AutoSize = true;
-            this.linkLabelSalir.Location = new System.Drawing.Point(209, 96);
-            this.linkLabelSalir.Name = "linkLabelSalir";
-            this.linkLabelSalir.Size = new System.Drawing.Size(29, 15);
-            this.linkLabelSalir.TabIndex = 4;
-            this.linkLabelSalir.TabStop = true;
-            this.linkLabelSalir.Text = "Salir";
-            this.linkLabelSalir.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelSalir_LinkClicked);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(73, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 22);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Bienvenido/a";
-            // 
-            // buttonEspecialidades
-            // 
-            this.buttonEspecialidades.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
-            this.buttonEspecialidades.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
-            this.buttonEspecialidades.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.buttonEspecialidades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(118)))), ((int)(((byte)(126)))));
-            this.buttonEspecialidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEspecialidades.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonEspecialidades.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonEspecialidades.Location = new System.Drawing.Point(10, 226);
-            this.buttonEspecialidades.Name = "buttonEspecialidades";
-            this.buttonEspecialidades.Size = new System.Drawing.Size(220, 58);
-            this.buttonEspecialidades.TabIndex = 8;
-            this.buttonEspecialidades.Text = "Especialidades";
-            this.buttonEspecialidades.UseVisualStyleBackColor = false;
-            this.buttonEspecialidades.Click += new System.EventHandler(this.buttonEspecialidades_Click_1);
-            // 
-            // buttonPersonal
-            // 
-            this.buttonPersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
-            this.buttonPersonal.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
-            this.buttonPersonal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.buttonPersonal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(118)))), ((int)(((byte)(126)))));
-            this.buttonPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPersonal.Font = new System.Drawing.Font("Arial Rounded MT Bold", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonPersonal.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonPersonal.Location = new System.Drawing.Point(10, 154);
-            this.buttonPersonal.Name = "buttonPersonal";
-            this.buttonPersonal.Size = new System.Drawing.Size(220, 58);
-            this.buttonPersonal.TabIndex = 9;
-            this.buttonPersonal.Text = "Personal";
-            this.buttonPersonal.UseVisualStyleBackColor = false;
             // 
             // buttonMateriales
             // 
@@ -226,6 +160,73 @@ namespace Clinica_Istea_program
             this.buttonMateriales.UseVisualStyleBackColor = false;
             this.buttonMateriales.Click += new System.EventHandler(this.buttonMateriales_Click);
             // 
+            // buttonPersonal
+            // 
+            this.buttonPersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
+            this.buttonPersonal.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
+            this.buttonPersonal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.buttonPersonal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(118)))), ((int)(((byte)(126)))));
+            this.buttonPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPersonal.Font = new System.Drawing.Font("Arial Rounded MT Bold", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonPersonal.ForeColor = System.Drawing.Color.LightGray;
+            this.buttonPersonal.Location = new System.Drawing.Point(10, 154);
+            this.buttonPersonal.Name = "buttonPersonal";
+            this.buttonPersonal.Size = new System.Drawing.Size(220, 58);
+            this.buttonPersonal.TabIndex = 9;
+            this.buttonPersonal.Text = "Personal";
+            this.buttonPersonal.UseVisualStyleBackColor = false;
+            this.buttonPersonal.Click += new System.EventHandler(this.buttonPersonal_Click);
+            // 
+            // buttonEspecialidades
+            // 
+            this.buttonEspecialidades.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
+            this.buttonEspecialidades.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
+            this.buttonEspecialidades.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.buttonEspecialidades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(118)))), ((int)(((byte)(126)))));
+            this.buttonEspecialidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEspecialidades.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonEspecialidades.ForeColor = System.Drawing.Color.LightGray;
+            this.buttonEspecialidades.Location = new System.Drawing.Point(10, 226);
+            this.buttonEspecialidades.Name = "buttonEspecialidades";
+            this.buttonEspecialidades.Size = new System.Drawing.Size(220, 58);
+            this.buttonEspecialidades.TabIndex = 8;
+            this.buttonEspecialidades.Text = "Especialidades";
+            this.buttonEspecialidades.UseVisualStyleBackColor = false;
+            this.buttonEspecialidades.Click += new System.EventHandler(this.buttonEspecialidades_Click_1);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Silver;
+            this.label2.Location = new System.Drawing.Point(73, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 22);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Bienvenido/a";
+            // 
+            // linkLabelSalir
+            // 
+            this.linkLabelSalir.AutoSize = true;
+            this.linkLabelSalir.Location = new System.Drawing.Point(209, 96);
+            this.linkLabelSalir.Name = "linkLabelSalir";
+            this.linkLabelSalir.Size = new System.Drawing.Size(29, 15);
+            this.linkLabelSalir.TabIndex = 4;
+            this.linkLabelSalir.TabStop = true;
+            this.linkLabelSalir.Text = "Salir";
+            this.linkLabelSalir.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelSalir_LinkClicked);
+            // 
+            // linkLabelMiCuenta
+            // 
+            this.linkLabelMiCuenta.AutoSize = true;
+            this.linkLabelMiCuenta.Location = new System.Drawing.Point(128, 96);
+            this.linkLabelMiCuenta.Name = "linkLabelMiCuenta";
+            this.linkLabelMiCuenta.Size = new System.Drawing.Size(62, 15);
+            this.linkLabelMiCuenta.TabIndex = 3;
+            this.linkLabelMiCuenta.TabStop = true;
+            this.linkLabelMiCuenta.Text = "Mi Cuenta";
+            this.linkLabelMiCuenta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMiCuenta_LinkClicked);
+            // 
             // PanelContenedor
             // 
             this.PanelContenedor.Controls.Add(this.panelFormularios);
@@ -238,17 +239,6 @@ namespace Clinica_Istea_program
             this.PanelContenedor.Size = new System.Drawing.Size(962, 450);
             this.PanelContenedor.TabIndex = 10;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(130, 70);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(506, 254);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // panelFormularios
             // 
             this.panelFormularios.BackColor = System.Drawing.SystemColors.Control;
@@ -259,6 +249,17 @@ namespace Clinica_Istea_program
             this.panelFormularios.Name = "panelFormularios";
             this.panelFormularios.Size = new System.Drawing.Size(713, 420);
             this.panelFormularios.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(130, 70);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(506, 254);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panelMenu
             // 
@@ -280,13 +281,13 @@ namespace Clinica_Istea_program
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             this.panelBarraTitulo.ResumeLayout(false);
             this.panelBarraTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).EndInit();
             this.panelMenu1.ResumeLayout(false);
             this.panelMenu1.PerformLayout();
             this.PanelContenedor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelFormularios.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

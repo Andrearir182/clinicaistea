@@ -32,7 +32,7 @@ namespace Clinica_Istea_program
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(detalleDepartamento));
             this.BtnMinimizar = new System.Windows.Forms.PictureBox();
             this.BtnCerrar = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.btnChange = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -68,17 +68,17 @@ namespace Clinica_Istea_program
             this.BtnCerrar.TabStop = false;
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
-            // label3
+            // lblTitulo
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.label3.Location = new System.Drawing.Point(326, 14);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(267, 22);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "DETALLE DEPARTAMENTO";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitulo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTitulo.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.lblTitulo.Location = new System.Drawing.Point(326, 14);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(267, 22);
+            this.lblTitulo.TabIndex = 26;
+            this.lblTitulo.Text = "DETALLE DEPARTAMENTO";
             // 
             // btnChange
             // 
@@ -95,7 +95,7 @@ namespace Clinica_Istea_program
             this.btnChange.TabIndex = 23;
             this.btnChange.Text = "NUEVO";
             this.btnChange.UseVisualStyleBackColor = false;
-            this.btnChange.Click += new System.EventHandler(this.nuevoMaterial);
+            this.btnChange.Click += new System.EventHandler(this.nuevaEspecialidad);
             // 
             // panel1
             // 
@@ -156,7 +156,7 @@ namespace Clinica_Istea_program
             this.Controls.Add(this.flowLayoutPanelDetalleDep);
             this.Controls.Add(this.BtnMinimizar);
             this.Controls.Add(this.BtnCerrar);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnChange);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -182,5 +182,6 @@ namespace Clinica_Istea_program
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelDetalleDep;
         private System.Windows.Forms.ComboBox comboBoxBuscar;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }

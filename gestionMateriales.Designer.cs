@@ -95,7 +95,6 @@ namespace Clinica_Istea_program
             this.btnChange.TabIndex = 23;
             this.btnChange.Text = "NUEVO";
             this.btnChange.UseVisualStyleBackColor = false;
-            this.btnChange.Click += new System.EventHandler(this.nuevoMaterial);
             // 
             // panel1
             // 

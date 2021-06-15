@@ -12,35 +12,21 @@ namespace Clinica_Istea_program
             InitializeComponent();
         }
 
-        private void recuperacionClave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void validarSoloNumeros(object sender, EventArgs e) {
-            foreach (char c in Txtcant.Text) {
-                if (!Char.IsNumber(c)) {
-                    Txtcant.Text = "";
-                }
-            }
-        }
-
-
         private void Txtmaterial_Enter(object sender, EventArgs e)
         {
-            FormatTextUser();
+            FormatTextnombre();
         }
         private void Txtmaterial_Leave(object sender, EventArgs e)
         {
-            FormatTextUser();
+            FormatTextnombre();
         }
         private void Txtcant_Enter(object sender, EventArgs e)
         {
-            FormateTextPass();
+            FormateTextdesc();
         }
         private void Txtcant_Leave(object sender, EventArgs e)
         {
-            FormateTextPass();
+            FormateTextdesc();
         }
 
         private void BtnCerrar_Click(object sender, EventArgs e)
@@ -53,67 +39,54 @@ namespace Clinica_Istea_program
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void FormatTextUser()
+        private void FormatTextnombre()
         {
-            if (Txtprod.Text == "")
+            if (Txtnombre.Text == "")
             {
-                Txtprod.Text = "Producto";
-                Txtprod.ForeColor = Color.Silver;
+                Txtnombre.Text = "Nombre";
+                Txtnombre.ForeColor = Color.Silver;
             }
         }
-        private void FormateTextPass()
+        private void FormateTextdesc()
         {
-            if (Txtcant.Text == "")
+            if (Txtdesc.Text == "")
             {
-                Txtcant.Text = "Cantidad";
-                Txtcant.ForeColor = Color.Silver;//LightGray
-            }
-        }
-
-        private void Txtmaterial_KeyDown(object sender, EventArgs e)
-        {
-            if (Txtprod.Text == "Producto")
-            {
-                Txtprod.Text = "";
-                Txtprod.ForeColor = Color.LightGray;
+                Txtdesc.Text = "Descripcion";
+                Txtdesc.ForeColor = Color.Silver;
             }
         }
 
-        private void Txtcant_KeyDown(object sender, EventArgs e)
+        private void Txtnombre_KeyDown(object sender, EventArgs e)
         {
-            if (Txtcant.Text == "Cantidad")
+            if (Txtnombre.Text == "Nombre")
             {
-                Txtcant.Text = "";
-                Txtcant.ForeColor = Color.LightGray;
+                Txtnombre.Text = "";
+                Txtnombre.ForeColor = Color.LightGray;
             }
         }
 
-        private void agregarMaterial(object sender, EventArgs e)
+        private void Txtdesc_KeyDown(object sender, EventArgs e)
         {
-            if(Txtprod.Text != "Producto") {
-                int number=0;
-                bool success = Int32.TryParse(Txtcant.Text, out number);
-                if (success && number>0) { 
-                    if (!ClinicaDBContext.existeMaterial(Txtprod.Text)  ) {
-                        ClinicaDBContext.addMaterial("pruebita",Txtprod.Text,Int32.Parse(Txtcant.Text));
-                        MessageBox.Show("Producto agregado con exito");
+            if (Txtdesc.Text == "Descripcion")
+            {
+                Txtdesc.Text = "";
+                Txtdesc.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void agregarEspecialidad(object sender, EventArgs e)
+        {
+            if(Txtnombre.Text != "Nombre") {
+                    if (!ClinicaDBContext.existeEspecialidad(Txtnombre.Text)){
+                        ClinicaDBContext.addEspecialidad(Txtnombre.Text, Txtdesc.Text);
+                        MessageBox.Show("Especialidad agregada con exito");
                         this.Close();
+                    }else{
+                        MessageBox.Show("Error: La especialidad ya existe en el sistema");
                     }
-                    else {
-                        MessageBox.Show("Error: El producto ya existe en el sistema");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Cantidad debe ser mayor a 0");
-                }
+            }else{
+                MessageBox.Show("Por favor ingrese un nombre para la especialidad");
             }
-            else
-            {
-                MessageBox.Show("Por favor ingrese un nombre para el producto");
-            }
-
         }
-   
     }
 }

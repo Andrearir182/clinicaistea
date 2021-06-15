@@ -433,6 +433,7 @@ namespace Clinica_Istea_program
             this.btnAdd.TabIndex = 18;
             this.btnAdd.Text = "AGREGAR";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.agregarEmpleado);
             // 
             // altaEmpleado
             // 

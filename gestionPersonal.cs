@@ -17,7 +17,7 @@ namespace Clinica_Istea_program
 
             InitializeComponent();
 
-            foreach (string s in ClinicaDBContext.GetMateriales()) { 
+            foreach (string s in ClinicaDBContext.Empleados.Select(x=>x.Nombre)) { 
                 comboBoxBuscar.Items.Add(s);
             }
             while (this.flowLayoutPanelDetalleDep.Controls.Count > 0)
@@ -122,9 +122,9 @@ namespace Clinica_Istea_program
         public static AutoCompleteStringCollection Autocomplete(string texto)
         {
             AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
-            foreach (Especialidad Dpto in ClinicaDBContext.BuscarDepartamento(texto))
+            foreach (Empleado Emp in ClinicaDBContext.Empleados.Where(x=>x.Nombre.Contains(texto)).ToList())
             {
-                coleccion.Add(Dpto.Nombre);
+                coleccion.Add(Emp.Nombre);
             }
             return coleccion;
         }
@@ -243,9 +243,9 @@ namespace Clinica_Istea_program
             this.Close();
         }
 
-        private void nuevoMaterial(object sender, EventArgs e)
+        private void nuevoEmpleado(object sender, EventArgs e)
         {
-            altaMaterial n = new altaMaterial();
+            altaEmpleado n = new altaEmpleado();
             n.Show();
         }
 
