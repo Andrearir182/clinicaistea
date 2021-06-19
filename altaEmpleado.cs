@@ -32,19 +32,19 @@ namespace Clinica_Istea_program
             if(ClinicaDBContext.Empleados.Where(x=>x.Matricula== txtMatricula.Text || x.Dni == txtDNI.Text).Any()) {
                 MessageBox.Show("El empleado ya existe en el sistema");
             }
-            if (txtNombre.Text == "")
+            if (txtNombre.Text == "" || txtNombre.Text=="Nombre")
             {
                 MessageBox.Show("Nombre debe contener un valor");
             }
-            else if (txtApellido.Text == "")
+            else if (txtApellido.Text == "" || txtApellido.Text == "Apellido")
             {
                 MessageBox.Show("Apellido debe contener un valor");
             }
-            else if (txtMatricula.Text == "")
+            else if (txtMatricula.Text == "" || txtMatricula.Text == "Matricula")
             {
                 MessageBox.Show("Matricula debe contener un valor");
             }
-            else if (txtDNI.Text == "")
+            else if (txtDNI.Text == "" || txtDNI.Text == "DNI")
             {
                 MessageBox.Show("DNI debe contener un valor");
             }
@@ -72,6 +72,15 @@ namespace Clinica_Istea_program
                 this.Close();
             }
            
+        }
+        public static AutoCompleteStringCollection Autocomplete(string texto)
+        {
+            AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
+            foreach (Especialidad Esp in ClinicaDBContext.Especialidades.Where(x => x.Nombre.Contains(texto)).ToList())
+            {
+                coleccion.Add(Esp.Nombre);
+            }
+            return coleccion;
         }
 
         private void Txt_Format_Nombre(object sender, EventArgs e){Txt_Format(txtNombre, "Nombre");}

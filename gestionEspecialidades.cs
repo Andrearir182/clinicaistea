@@ -35,7 +35,7 @@ namespace Clinica_Istea_program
                         Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
                         ForeColor = System.Drawing.Color.Silver,
                         Margin = new System.Windows.Forms.Padding(3, 2, 3, 2),
-                        Size = new System.Drawing.Size(89, 20),
+                        Size = new System.Drawing.Size(130, 20),
                         TabIndex = 13
 
                     });

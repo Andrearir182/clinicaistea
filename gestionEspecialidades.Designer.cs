@@ -33,9 +33,9 @@ namespace Clinica_Istea_program
             this.label3 = new System.Windows.Forms.Label();
             this.btnChange = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBoxBuscar = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanelDetalleDep = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnMinimizar = new System.Windows.Forms.PictureBox();
             this.BtnCerrar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -77,14 +77,23 @@ namespace Clinica_Istea_program
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.BtnMinimizar);
-            this.panel1.Controls.Add(this.BtnCerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(219, 251);
             this.panel1.TabIndex = 21;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(8, 64);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(206, 74);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 36;
+            this.pictureBox1.TabStop = false;
             // 
             // comboBoxBuscar
             // 
@@ -113,38 +122,29 @@ namespace Clinica_Istea_program
             this.flowLayoutPanelDetalleDep.TabIndex = 34;
             this.flowLayoutPanelDetalleDep.WrapContents = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(10, 66);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(206, 74);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 36;
-            this.pictureBox1.TabStop = false;
-            // 
             // BtnMinimizar
             // 
             this.BtnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("BtnMinimizar.Image")));
-            this.BtnMinimizar.Location = new System.Drawing.Point(619, 4);
+            this.BtnMinimizar.Location = new System.Drawing.Point(617, 2);
             this.BtnMinimizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnMinimizar.Name = "BtnMinimizar";
             this.BtnMinimizar.Size = new System.Drawing.Size(24, 20);
             this.BtnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.BtnMinimizar.TabIndex = 38;
             this.BtnMinimizar.TabStop = false;
+            this.BtnMinimizar.Click += new System.EventHandler(this.BtnMinimizar_Click);
             // 
             // BtnCerrar
             // 
             this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
-            this.BtnCerrar.Location = new System.Drawing.Point(651, 4);
+            this.BtnCerrar.Location = new System.Drawing.Point(649, 2);
             this.BtnCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(21, 20);
             this.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.BtnCerrar.TabIndex = 37;
             this.BtnCerrar.TabStop = false;
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // gestionEspecialidades
             // 
@@ -152,7 +152,9 @@ namespace Clinica_Istea_program
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(675, 251);
+            this.Controls.Add(this.BtnMinimizar);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.comboBoxBuscar);
             this.Controls.Add(this.flowLayoutPanelDetalleDep);
             this.Controls.Add(this.btnChange);

@@ -123,6 +123,7 @@ namespace Clinica_Istea_program
             this.comboBoxBuscar.AccessibleName = "";
             this.comboBoxBuscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.comboBoxBuscar.AutoCompleteCustomSource = gestionMateriales.Autocomplete(comboBoxBuscar.Text);
             this.comboBoxBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.comboBoxBuscar.ForeColor = System.Drawing.Color.Silver;
             this.comboBoxBuscar.FormattingEnabled = true;
