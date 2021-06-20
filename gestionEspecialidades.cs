@@ -25,6 +25,8 @@ namespace Clinica_Istea_program
                 this.flowLayoutPanelDetalleDep.Controls.RemoveAt(0);
             }
 
+
+            //GAW: UserControl
             foreach (Especialidad e in ClinicaDBContext.Especialidades)
             {
                 FlowLayoutPanel fp1 = new FlowLayoutPanel() { FlowDirection = System.Windows.Forms.FlowDirection.LeftToRight, Size = new System.Drawing.Size(378, 20) };

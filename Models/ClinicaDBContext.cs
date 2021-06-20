@@ -9,7 +9,10 @@ namespace Clinica_Istea_program.Models
         public static List<Especialidad> Especialidades = new List<Especialidad>();
         public static List<Empleado> Empleados = new List<Empleado>();
         public static List<Material> Materiales = new List<Material>();
-        private static string usuarioActivo;// = new Usuario();
+        
+        //GAW: Veniamos bien con esto, solo que tenia que ser del tipo user.
+        private static string usuarioActivo;// = new Usuario(); 
+
         public static int longitudTextoDetDep = 0;
         public static void Cargar()
         {

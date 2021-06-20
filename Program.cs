@@ -25,6 +25,14 @@ namespace Clinica_Istea_program
             //detalleDepartamento d = new detalleDepartamento(e);
             //prueba.Show();
             //d.Show();
+
+
+            //GAW:Aca lo que tendrias que haber hecho es:
+            //Application.Run(new panelMenu());
+
+            //GAW: Esto no
+            //         |
+            //         V
             PantallaIngreso.Show();
             Application.Run();
         }

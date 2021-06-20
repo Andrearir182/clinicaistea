@@ -12,6 +12,8 @@ namespace Clinica_Istea_program
         public altaEmpleado()
         {
             InitializeComponent();
+
+            //Tenias que usar combobox.DataSource y DisplayMember
             foreach (string s in ClinicaDBContext.Especialidades.Select(x=>x.Nombre).ToList())
             {
                 comboBoxBuscar.Items.Add(s);

@@ -25,6 +25,9 @@ namespace Clinica_Istea_program
                 this.flowLayoutPanelDetalleDep.Controls.RemoveAt(0);
             }
 
+
+            //GAW: Todo lo que estas agregando aca lo podrias haber armado en un UserControl
+            //Te hubieras facilitado la vida.
             foreach (Empleado e in ClinicaDBContext.Empleados)
             {
                 FlowLayoutPanel fp1 = new FlowLayoutPanel() { FlowDirection = System.Windows.Forms.FlowDirection.LeftToRight, Size = new System.Drawing.Size(398, 20) };
