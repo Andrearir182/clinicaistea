@@ -124,7 +124,6 @@ namespace Clinica_Istea_program
             this.comboBoxBuscar.AccessibleName = "";
             this.comboBoxBuscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.comboBoxBuscar.AutoCompleteCustomSource = gestionPersonal.Autocomplete(comboBoxBuscar.Text);
             this.comboBoxBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.comboBoxBuscar.ForeColor = System.Drawing.Color.Silver;
             this.comboBoxBuscar.FormattingEnabled = true;
@@ -134,6 +133,8 @@ namespace Clinica_Istea_program
             this.comboBoxBuscar.Size = new System.Drawing.Size(277, 23);
             this.comboBoxBuscar.TabIndex = 35;
             this.comboBoxBuscar.TextUpdate += new System.EventHandler(this.recargarListado);
+            this.comboBoxBuscar.SelectedValueChanged += new System.EventHandler(this.recargarListado);
+            this.comboBoxBuscar.Click += new System.EventHandler(this.recargarListado);
             // 
             // flowLayoutPanelDetalleDep
             // 

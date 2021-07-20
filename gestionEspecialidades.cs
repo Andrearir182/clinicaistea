@@ -25,25 +25,27 @@ namespace Clinica_Istea_program
                 this.flowLayoutPanelDetalleDep.Controls.RemoveAt(0);
             }
 
-            foreach (Especialidad e in ClinicaDBContext.Especialidades)
+            foreach (Especialidad es in ClinicaDBContext.Especialidades)
             {
+                FlowLayoutPanel fp = new FlowLayoutPanel() { FlowDirection = System.Windows.Forms.FlowDirection.LeftToRight, Size = new System.Drawing.Size(378, 60), BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D };
+                
                 FlowLayoutPanel fp1 = new FlowLayoutPanel() { FlowDirection = System.Windows.Forms.FlowDirection.LeftToRight, Size = new System.Drawing.Size(378, 20) };
-                    fp1.Controls.Add(new TextBox(){
+                    fp1.Controls.Add(new Label(){
                         Text="Nombre",
                         BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80))))),
                         BorderStyle = System.Windows.Forms.BorderStyle.None,
-                        Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
+                        Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
                         ForeColor = System.Drawing.Color.Silver,
                         Margin = new System.Windows.Forms.Padding(3, 2, 3, 2),
-                        Size = new System.Drawing.Size(130, 20),
+                        Size = new System.Drawing.Size(90, 20),
                         TabIndex = 13
 
                     });
-                    fp1.Controls.Add(new TextBox() { 
-                        Text = e.Nombre,
+                    fp1.Controls.Add(new Label() { 
+                        Text = es.Nombre,
                         BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80))))),
                         BorderStyle = System.Windows.Forms.BorderStyle.None,
-                        Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
+                        Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
                         ForeColor = System.Drawing.Color.Silver,
                         Location = new System.Drawing.Point(130, 12),
                         Margin = new System.Windows.Forms.Padding(3, 2, 3, 2),
@@ -52,25 +54,82 @@ namespace Clinica_Istea_program
                         TabIndex = 22
                     });
 
-                this.flowLayoutPanelDetalleDep.Controls.Add(fp1);
                 FlowLayoutPanel fp2 = new FlowLayoutPanel() { FlowDirection = System.Windows.Forms.FlowDirection.LeftToRight, Size = new System.Drawing.Size(378, 20) };
-                fp2.Controls.Add(new TextBox()
+                fp2.Controls.Add(new Label()
                 {
                     Text = "Descripcion",
                     BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80))))),
                     BorderStyle = System.Windows.Forms.BorderStyle.None,
-                    Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
+                    Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
                     ForeColor = System.Drawing.Color.Silver,
                     Margin = new System.Windows.Forms.Padding(3, 2, 3, 2),
                     Size = new System.Drawing.Size(89, 20),
                     TabIndex = 20
                 });
-                fp2.Controls.Add(new TextBox()
+                fp2.Controls.Add(new Label()
                 {
-                    Text = e.Descripcion,
+                    Text = es.Descripcion,
                     BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80))))),
                     BorderStyle = System.Windows.Forms.BorderStyle.None,
-                    Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
+                    Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
+                    ForeColor = System.Drawing.Color.Silver,
+                    Location = new System.Drawing.Point(130, 12),
+                    Margin = new System.Windows.Forms.Padding(3, 2, 3, 2),
+                    Name = "TxtProducto",
+                    Size = new System.Drawing.Size(250, 20),
+                    TabIndex = 22
+                });
+                fp.Controls.Add(fp1);
+                fp.Controls.Add(fp2);
+                this.flowLayoutPanelDetalleDep.Controls.Add(fp);
+              
+            }
+
+
+        }
+
+        public static AutoCompleteStringCollection Autocomplete(string texto)
+        {
+            AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
+            foreach (Especialidad Esp in ClinicaDBContext.Especialidades.Where(x => x.Nombre.Contains(texto)).ToList())
+            {
+                coleccion.Add(Esp.Nombre);
+            }
+            return coleccion;
+        }
+
+        private void recargarListado(object sender, EventArgs e)
+        {
+            while (this.flowLayoutPanelDetalleDep.Controls.Count > 0)
+            {
+                this.flowLayoutPanelDetalleDep.Controls.RemoveAt(0);
+            }
+
+            string Texto = comboBoxBuscar.Text.ToUpper();
+            List<Especialidad> EspecialidadesSeleccion = ClinicaDBContext.Especialidades.Where(z => (z.Nombre != null && z.Nombre.ToUpper().Contains(Texto))).ToList();
+            foreach (Especialidad es in EspecialidadesSeleccion)
+            {
+                FlowLayoutPanel fp = new FlowLayoutPanel() { FlowDirection = System.Windows.Forms.FlowDirection.LeftToRight, Size = new System.Drawing.Size(378, 60), BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D };
+
+                FlowLayoutPanel fp1 = new FlowLayoutPanel() { FlowDirection = System.Windows.Forms.FlowDirection.LeftToRight, Size = new System.Drawing.Size(378, 20) };
+                fp1.Controls.Add(new Label()
+                {
+                    Text = "Nombre",
+                    BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80))))),
+                    BorderStyle = System.Windows.Forms.BorderStyle.None,
+                    Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
+                    ForeColor = System.Drawing.Color.Silver,
+                    Margin = new System.Windows.Forms.Padding(3, 2, 3, 2),
+                    Size = new System.Drawing.Size(90, 20),
+                    TabIndex = 13
+
+                });
+                fp1.Controls.Add(new Label()
+                {
+                    Text = es.Nombre,
+                    BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80))))),
+                    BorderStyle = System.Windows.Forms.BorderStyle.None,
+                    Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
                     ForeColor = System.Drawing.Color.Silver,
                     Location = new System.Drawing.Point(130, 12),
                     Margin = new System.Windows.Forms.Padding(3, 2, 3, 2),
@@ -78,29 +137,39 @@ namespace Clinica_Istea_program
                     Size = new System.Drawing.Size(89, 20),
                     TabIndex = 22
                 });
-                this.flowLayoutPanelDetalleDep.Controls.Add(fp2);
+
+                FlowLayoutPanel fp2 = new FlowLayoutPanel() { FlowDirection = System.Windows.Forms.FlowDirection.LeftToRight, Size = new System.Drawing.Size(378, 20) };
+                fp2.Controls.Add(new Label()
+                {
+                    Text = "Descripcion",
+                    BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80))))),
+                    BorderStyle = System.Windows.Forms.BorderStyle.None,
+                    Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
+                    ForeColor = System.Drawing.Color.Silver,
+                    Margin = new System.Windows.Forms.Padding(3, 2, 3, 2),
+                    Size = new System.Drawing.Size(89, 20),
+                    TabIndex = 20
+                });
+                fp2.Controls.Add(new Label()
+                {
+                    Text = es.Descripcion,
+                    BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80))))),
+                    BorderStyle = System.Windows.Forms.BorderStyle.None,
+                    Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
+                    ForeColor = System.Drawing.Color.Silver,
+                    Location = new System.Drawing.Point(130, 12),
+                    Margin = new System.Windows.Forms.Padding(3, 2, 3, 2),
+                    Name = "TxtProducto",
+                    Size = new System.Drawing.Size(250, 20),
+                    TabIndex = 22
+                });
+                fp.Controls.Add(fp1);
+                fp.Controls.Add(fp2);
+                this.flowLayoutPanelDetalleDep.Controls.Add(fp);
 
             }
-
-
         }
 
-        private void btnVer_Click(object sender, EventArgs e)
-        {
-            Empleado x = ClinicaDBContext.getEmpleado(Convert.ToInt32(this.Name));
-            detalleEmpleado n = new detalleEmpleado(x);
-            n.Show();
-        }
-
-        public static AutoCompleteStringCollection Autocomplete(string texto)
-        {
-            AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
-            foreach (Especialidad Dpto in ClinicaDBContext.BuscarDepartamento(texto))
-            {
-                coleccion.Add(Dpto.Nombre);
-            }
-            return coleccion;
-        }
 
         private void BtnMinimizar_Click(object sender, EventArgs e)
         {
@@ -116,6 +185,9 @@ namespace Clinica_Istea_program
         {
             altaEspecialidad n = new altaEspecialidad();
             n.Show();
+            this.Close();
         }
+
+
     }
 }

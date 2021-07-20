@@ -7,9 +7,11 @@ namespace Clinica_Istea_program
 {
     public partial class altaMaterial : Form
     {
-        public altaMaterial()
+        public Especialidad esp { get; set; }
+        public altaMaterial(Especialidad d)
         {
             InitializeComponent();
+            esp = d;
         }
 
         private void recuperacionClave(object sender, EventArgs e)
@@ -25,27 +27,11 @@ namespace Clinica_Istea_program
             }
         }
 
-
-        private void Txtmaterial_Enter(object sender, EventArgs e)
-        {
-            FormatTextUser();
-        }
-        private void Txtmaterial_Leave(object sender, EventArgs e)
-        {
-            FormatTextUser();
-        }
-        private void Txtcant_Enter(object sender, EventArgs e)
-        {
-            FormateTextPass();
-        }
-        private void Txtcant_Leave(object sender, EventArgs e)
-        {
-            FormateTextPass();
-        }
-
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+            detalleDepartamento d = new detalleDepartamento(esp);
+            d.Show();
         }
 
         private void BtnMinimizar_Click(object sender, EventArgs e)
@@ -53,49 +39,16 @@ namespace Clinica_Istea_program
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void FormatTextUser()
-        {
-            if (Txtprod.Text == "")
-            {
-                Txtprod.Text = "Producto";
-                Txtprod.ForeColor = Color.Silver;
-            }
-        }
-        private void FormateTextPass()
-        {
-            if (Txtcant.Text == "")
-            {
-                Txtcant.Text = "Cantidad";
-                Txtcant.ForeColor = Color.Silver;//LightGray
-            }
-        }
-
-        private void Txtmaterial_KeyDown(object sender, EventArgs e)
-        {
-            if (Txtprod.Text == "Producto")
-            {
-                Txtprod.Text = "";
-                Txtprod.ForeColor = Color.LightGray;
-            }
-        }
-
-        private void Txtcant_KeyDown(object sender, EventArgs e)
-        {
-            if (Txtcant.Text == "Cantidad")
-            {
-                Txtcant.Text = "";
-                Txtcant.ForeColor = Color.LightGray;
-            }
-        }
+  
 
         private void agregarMaterial(object sender, EventArgs e)
         {
-            if(Txtprod.Text != "Producto") {
+            if(Txtprod.Text != "") {
                 int number=0;
                 bool success = Int32.TryParse(Txtcant.Text, out number);
                 if (success && number>0) { 
-                    if (!ClinicaDBContext.existeMaterial(Txtprod.Text)  ) {
-                        ClinicaDBContext.addMaterial("pruebita",Txtprod.Text,Int32.Parse(Txtcant.Text));
+                    if (!ClinicaDBContext.existeMaterial(Txtprod.Text, esp)  ) {
+                        ClinicaDBContext.addMaterial(Txtprod.Text, Int32.Parse(Txtcant.Text), esp);
                         MessageBox.Show("Producto agregado con exito");
                         this.Close();
                     }

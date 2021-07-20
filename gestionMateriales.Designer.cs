@@ -123,7 +123,6 @@ namespace Clinica_Istea_program
             this.comboBoxBuscar.AccessibleName = "";
             this.comboBoxBuscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.comboBoxBuscar.AutoCompleteCustomSource = gestionMateriales.Autocomplete(comboBoxBuscar.Text);
             this.comboBoxBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.comboBoxBuscar.ForeColor = System.Drawing.Color.Silver;
             this.comboBoxBuscar.FormattingEnabled = true;
@@ -132,6 +131,9 @@ namespace Clinica_Istea_program
             this.comboBoxBuscar.Name = "comboBoxBuscar";
             this.comboBoxBuscar.Size = new System.Drawing.Size(277, 23);
             this.comboBoxBuscar.TabIndex = 35;
+            this.comboBoxBuscar.SelectedIndexChanged += new System.EventHandler(this.recargarListado);
+            this.comboBoxBuscar.TextUpdate += new System.EventHandler(this.recargarListado);
+            this.comboBoxBuscar.Click += new System.EventHandler(this.recargarListado);
             // 
             // flowLayoutPanelDetalleDep
             // 
@@ -164,6 +166,7 @@ namespace Clinica_Istea_program
             this.Name = "gestionMateriales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.TextChanged += new System.EventHandler(this.recargarListado);
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
             this.panel1.ResumeLayout(false);

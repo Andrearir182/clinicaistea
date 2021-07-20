@@ -110,7 +110,6 @@ namespace Clinica_Istea_program
 
                  void btnVer_Click(object sender, EventArgs e)
                 {
-                    //MessageBox.Show("asdasdas");
                     Empleado x = ClinicaDBContext.getEmpleado(Convert.ToInt32(b.Name));
                     detalleEmpleado n = new detalleEmpleado(x);
                     n.Show();
@@ -247,6 +246,7 @@ namespace Clinica_Istea_program
         {
             altaEmpleado n = new altaEmpleado();
             n.Show();
+            this.Close();
         }
 
     }

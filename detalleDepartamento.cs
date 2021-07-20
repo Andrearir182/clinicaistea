@@ -5,6 +5,7 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 
 namespace Clinica_Istea_program
 {
@@ -20,7 +21,7 @@ namespace Clinica_Istea_program
             {
                 this.flowLayoutPanelDetalleDep.Controls.RemoveAt(0);
             }
-            MessageBox.Show(d.Nombre);
+
             foreach (string s in ClinicaDBContext.GetMateriales(d)) { 
                 comboBoxBuscar.Items.Add(s);
             }
@@ -30,7 +31,7 @@ namespace Clinica_Istea_program
                 FlowLayoutPanel fp1 = new FlowLayoutPanel() { FlowDirection = System.Windows.Forms.FlowDirection.LeftToRight, Size = new System.Drawing.Size(398, 20) };
                 fp1.Controls.Add(new Label()
                 {
-                    Text = "Nombre",
+                    Text = "Producto",
                     BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80))))),
                     BorderStyle = System.Windows.Forms.BorderStyle.None,
                     Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
@@ -61,8 +62,6 @@ namespace Clinica_Istea_program
                 });
                 NumericUpDown b = new NumericUpDown()
                 {
-                    Text = "Ver",
-                    Name = m.Producto,
                     Maximum= 999999999999999,
                     Minimum= 0,
                     Value = Convert.ToDecimal(m.Cantidad),
@@ -79,7 +78,7 @@ namespace Clinica_Istea_program
 
                 void ActualizarCant(object sender, EventArgs e)
                 {
-                    ClinicaDBContext.Materiales.Where(x => x.Producto == b.Name && x.Dep == d).FirstOrDefault().Cantidad=Convert.ToInt32(b.Value);
+                    ClinicaDBContext.actualizarCantidad(esp, m.Producto, Convert.ToInt32(b.Value));
                 }
             }
         }
@@ -92,13 +91,13 @@ namespace Clinica_Istea_program
             }
 
             string Texto = comboBoxBuscar.Text.ToUpper();
-            List<Material> MaterialesSeleccionados = ClinicaDBContext.Materiales.Where(z => (z.Producto != null && z.Producto.ToUpper().Contains(Texto))).ToList();
+            List<Material> MaterialesSeleccionados = ClinicaDBContext.Materiales.Where(z => (z.Producto != null && z.Producto.ToUpper().Contains(Texto) && z.Dep == esp)).ToList();
             foreach (Material m in MaterialesSeleccionados)
             {
                 FlowLayoutPanel fp1 = new FlowLayoutPanel() { FlowDirection = System.Windows.Forms.FlowDirection.LeftToRight, Size = new System.Drawing.Size(398, 20) };
                 fp1.Controls.Add(new Label()
                 {
-                    Text = "Nombre",
+                    Text = "Producto",
                     BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80))))),
                     BorderStyle = System.Windows.Forms.BorderStyle.None,
                     Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point),
@@ -129,8 +128,7 @@ namespace Clinica_Istea_program
                 });
                 NumericUpDown b = new NumericUpDown()
                 {
-                    Text = "Ver",
-                    Name = m.Producto,
+
                     Maximum = 999999999999999,
                     Minimum = 0,
                     Value = Convert.ToDecimal(m.Cantidad),
@@ -147,7 +145,7 @@ namespace Clinica_Istea_program
 
                 void ActualizarCant(object sender, EventArgs e)
                 {
-                    ClinicaDBContext.Materiales.Where(x => x.Producto == b.Name && x.Dep == esp).FirstOrDefault().Cantidad = Convert.ToInt32(b.Value);
+                    ClinicaDBContext.actualizarCantidad(esp, m.Producto, Convert.ToInt32(b.Value));
                 }
             }
         }
@@ -170,12 +168,29 @@ namespace Clinica_Istea_program
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+            gestionMateriales g = new gestionMateriales();
+            g.Show();
         }
 
         private void nuevaEspecialidad(object sender, EventArgs e)
         {
-            altaEspecialidad n = new altaEspecialidad();
+            altaMaterial n = new altaMaterial(esp);
             n.Show();
+            this.Close();
+        }
+
+        private void downloadCSV_Click(object sender, EventArgs e)
+        {
+            string Texto = comboBoxBuscar.Text.ToUpper();
+            List<Material> MaterialesSeleccionados = ClinicaDBContext.Materiales.Where(z => ( z.Producto.ToUpper().Contains(Texto) && z.Dep == esp)).ToList();
+            
+            string path = @"C:\CVSMateriales.csv";
+            File.WriteAllText(path,"Nombre;Cantidad\n");
+            foreach (Material m in MaterialesSeleccionados) {
+                string[] lineas = new string[] { m.Producto + ";" + m.Cantidad + "\n" };
+                File.AppendAllLines(path, lineas);
+            }
+            MessageBox.Show(@"Archivo creado en C:\CVSMateriales.csv con exito!");
         }
     }
 }

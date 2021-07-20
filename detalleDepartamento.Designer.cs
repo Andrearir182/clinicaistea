@@ -38,6 +38,7 @@ namespace Clinica_Istea_program
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBoxBuscar = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanelDetalleDep = new System.Windows.Forms.FlowLayoutPanel();
+            this.downloadCSV = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
             this.panel1.SuspendLayout();
@@ -100,6 +101,7 @@ namespace Clinica_Istea_program
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
+            this.panel1.Controls.Add(this.downloadCSV);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -132,6 +134,9 @@ namespace Clinica_Istea_program
             this.comboBoxBuscar.Name = "comboBoxBuscar";
             this.comboBoxBuscar.Size = new System.Drawing.Size(277, 23);
             this.comboBoxBuscar.TabIndex = 35;
+            this.comboBoxBuscar.TextUpdate += new System.EventHandler(this.recargarListado);
+            this.comboBoxBuscar.SelectedValueChanged += new System.EventHandler(this.recargarListado);
+            this.comboBoxBuscar.Click += new System.EventHandler(this.recargarListado);
             // 
             // flowLayoutPanelDetalleDep
             // 
@@ -145,6 +150,23 @@ namespace Clinica_Istea_program
             this.flowLayoutPanelDetalleDep.Size = new System.Drawing.Size(378, 133);
             this.flowLayoutPanelDetalleDep.TabIndex = 34;
             this.flowLayoutPanelDetalleDep.WrapContents = false;
+            // 
+            // downloadCSV
+            // 
+            this.downloadCSV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
+            this.downloadCSV.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
+            this.downloadCSV.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.downloadCSV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(118)))), ((int)(((byte)(126)))));
+            this.downloadCSV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.downloadCSV.ForeColor = System.Drawing.Color.LightGray;
+            this.downloadCSV.Location = new System.Drawing.Point(41, 199);
+            this.downloadCSV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.downloadCSV.Name = "downloadCSV";
+            this.downloadCSV.Size = new System.Drawing.Size(136, 30);
+            this.downloadCSV.TabIndex = 36;
+            this.downloadCSV.Text = "DESCARGAR CSV";
+            this.downloadCSV.UseVisualStyleBackColor = false;
+            this.downloadCSV.Click += new System.EventHandler(this.downloadCSV_Click);
             // 
             // detalleDepartamento
             // 
@@ -164,6 +186,7 @@ namespace Clinica_Istea_program
             this.Name = "detalleDepartamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.TextChanged += new System.EventHandler(this.recargarListado);
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -183,5 +206,6 @@ namespace Clinica_Istea_program
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelDetalleDep;
         private System.Windows.Forms.ComboBox comboBoxBuscar;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button downloadCSV;
     }
 }

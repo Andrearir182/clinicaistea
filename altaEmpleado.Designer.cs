@@ -117,13 +117,9 @@ namespace Clinica_Istea_program
             this.txtApellido.Location = new System.Drawing.Point(9, 48);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApellido.Name = "txtApellido";
+            this.txtApellido.PlaceholderText = "Apellido";
             this.txtApellido.Size = new System.Drawing.Size(243, 20);
             this.txtApellido.TabIndex = 22;
-            this.txtApellido.Text = "Apellido";
-            this.txtApellido.Click += new System.EventHandler(this.Txt_KeyDown_Apellido);
-            this.txtApellido.Enter += new System.EventHandler(this.Txt_Format_Apellido);
-            this.txtApellido.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_KeyDown_Apellido);
-            this.txtApellido.Leave += new System.EventHandler(this.Txt_Format_Apellido);
             // 
             // txtMatricula
             // 
@@ -134,13 +130,9 @@ namespace Clinica_Istea_program
             this.txtMatricula.Location = new System.Drawing.Point(9, 99);
             this.txtMatricula.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMatricula.Name = "txtMatricula";
+            this.txtMatricula.PlaceholderText = "Matricula";
             this.txtMatricula.Size = new System.Drawing.Size(243, 20);
             this.txtMatricula.TabIndex = 20;
-            this.txtMatricula.Text = "Matricula";
-            this.txtMatricula.Click += new System.EventHandler(this.Txt_KeyDown_Matricula);
-            this.txtMatricula.Enter += new System.EventHandler(this.Txt_Format_Matricula);
-            this.txtMatricula.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_KeyDown_Matricula);
-            this.txtMatricula.Leave += new System.EventHandler(this.Txt_Format_Matricula);
             // 
             // txtDNI
             // 
@@ -151,13 +143,9 @@ namespace Clinica_Istea_program
             this.txtDNI.Location = new System.Drawing.Point(9, 75);
             this.txtDNI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDNI.Name = "txtDNI";
+            this.txtDNI.PlaceholderText = "DNI";
             this.txtDNI.Size = new System.Drawing.Size(243, 20);
             this.txtDNI.TabIndex = 19;
-            this.txtDNI.Text = "DNI";
-            this.txtDNI.Click += new System.EventHandler(this.Txt_KeyDown_Dni);
-            this.txtDNI.Enter += new System.EventHandler(this.Txt_Format_Dni);
-            this.txtDNI.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_KeyDown_Dni);
-            this.txtDNI.Leave += new System.EventHandler(this.Txt_Format_Dni);
             // 
             // txtNombre
             // 
@@ -168,13 +156,9 @@ namespace Clinica_Istea_program
             this.txtNombre.Location = new System.Drawing.Point(9, 24);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
+            this.txtNombre.PlaceholderText = "Nombre";
             this.txtNombre.Size = new System.Drawing.Size(243, 20);
             this.txtNombre.TabIndex = 18;
-            this.txtNombre.Text = "Nombre";
-            this.txtNombre.Click += new System.EventHandler(this.Txt_KeyDown_Nombre);
-            this.txtNombre.Enter += new System.EventHandler(this.Txt_Format_Nombre);
-            this.txtNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_KeyDown_Nombre);
-            this.txtNombre.Leave += new System.EventHandler(this.Txt_Format_Nombre);
             // 
             // label8
             // 
@@ -244,13 +228,9 @@ namespace Clinica_Istea_program
             this.txtEmail.Location = new System.Drawing.Point(9, 50);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PlaceholderText = "Email";
             this.txtEmail.Size = new System.Drawing.Size(243, 20);
             this.txtEmail.TabIndex = 22;
-            this.txtEmail.Text = "Email";
-            this.txtEmail.Click += new System.EventHandler(this.Txt_KeyDown_Email);
-            this.txtEmail.Enter += new System.EventHandler(this.Txt_Format_Email);
-            this.txtEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_KeyDown_Email);
-            this.txtEmail.Leave += new System.EventHandler(this.Txt_Format_Email);
             // 
             // txtTelefono
             // 
@@ -261,13 +241,9 @@ namespace Clinica_Istea_program
             this.txtTelefono.Location = new System.Drawing.Point(9, 24);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.PlaceholderText = "Telefono";
             this.txtTelefono.Size = new System.Drawing.Size(243, 20);
             this.txtTelefono.TabIndex = 21;
-            this.txtTelefono.Text = "Telefono";
-            this.txtTelefono.Click += new System.EventHandler(this.Txt_KeyDown_Telefono);
-            this.txtTelefono.Enter += new System.EventHandler(this.Txt_Format_Telefono);
-            this.txtTelefono.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_KeyDown_Telefono);
-            this.txtTelefono.Leave += new System.EventHandler(this.Txt_Format_Telefono);
             // 
             // label6
             // 
@@ -317,13 +293,9 @@ namespace Clinica_Istea_program
             this.txtProvincia.Location = new System.Drawing.Point(6, 74);
             this.txtProvincia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtProvincia.Name = "txtProvincia";
+            this.txtProvincia.PlaceholderText = "Provincia";
             this.txtProvincia.Size = new System.Drawing.Size(240, 20);
             this.txtProvincia.TabIndex = 26;
-            this.txtProvincia.Text = "Provincia";
-            this.txtProvincia.Click += new System.EventHandler(this.Txt_KeyDown_Provincia);
-            this.txtProvincia.Enter += new System.EventHandler(this.Txt_Format_Provincia);
-            this.txtProvincia.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_KeyDown_Provincia);
-            this.txtProvincia.Leave += new System.EventHandler(this.Txt_Format_Provincia);
             // 
             // txtLocalidad
             // 
@@ -334,13 +306,9 @@ namespace Clinica_Istea_program
             this.txtLocalidad.Location = new System.Drawing.Point(6, 48);
             this.txtLocalidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLocalidad.Name = "txtLocalidad";
+            this.txtLocalidad.PlaceholderText = "Localidad";
             this.txtLocalidad.Size = new System.Drawing.Size(240, 20);
             this.txtLocalidad.TabIndex = 25;
-            this.txtLocalidad.Text = "Localidad";
-            this.txtLocalidad.Click += new System.EventHandler(this.Txt_KeyDown_Localidad);
-            this.txtLocalidad.Enter += new System.EventHandler(this.Txt_Format_Localidad);
-            this.txtLocalidad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_KeyDown_Localidad);
-            this.txtLocalidad.Leave += new System.EventHandler(this.Txt_Format_Localidad);
             // 
             // txtCalle
             // 
@@ -351,13 +319,9 @@ namespace Clinica_Istea_program
             this.txtCalle.Location = new System.Drawing.Point(6, 24);
             this.txtCalle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCalle.Name = "txtCalle";
+            this.txtCalle.PlaceholderText = "Calle";
             this.txtCalle.Size = new System.Drawing.Size(240, 20);
             this.txtCalle.TabIndex = 24;
-            this.txtCalle.Text = "Calle";
-            this.txtCalle.Click += new System.EventHandler(this.Txt_KeyDown_Calle);
-            this.txtCalle.Enter += new System.EventHandler(this.Txt_Format_Calle);
-            this.txtCalle.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_KeyDown_Calle);
-            this.txtCalle.Leave += new System.EventHandler(this.Txt_Format_Calle);
             // 
             // label1
             // 

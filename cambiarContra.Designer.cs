@@ -57,13 +57,10 @@ namespace Clinica_Istea_program
             this.Txtpass2.Location = new System.Drawing.Point(277, 117);
             this.Txtpass2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txtpass2.Name = "Txtpass2";
+            this.Txtpass2.PlaceholderText = "Reingrese nueva contraseña";
             this.Txtpass2.Size = new System.Drawing.Size(357, 20);
             this.Txtpass2.TabIndex = 29;
-            this.Txtpass2.Text = "Reingrese nueva contraseña";
-            this.Txtpass2.Click += new System.EventHandler(this.Txtpass2_KeyDown);
-            this.Txtpass2.Enter += new System.EventHandler(this.Txtpass2_Enter);
-            this.Txtpass2.Leave += new System.EventHandler(this.Txtpass2_Leave);
-            this.Txtpass2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Txtpass2_KeyDown);
+            this.Txtpass2.UseSystemPasswordChar = true;
             // 
             // BtnMinimizar
             // 
@@ -108,13 +105,10 @@ namespace Clinica_Istea_program
             this.Txtpass.Location = new System.Drawing.Point(277, 83);
             this.Txtpass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txtpass.Name = "Txtpass";
+            this.Txtpass.PlaceholderText = "Ingrese nueva contraseña";
             this.Txtpass.Size = new System.Drawing.Size(357, 20);
             this.Txtpass.TabIndex = 22;
-            this.Txtpass.Text = "Ingrese nueva contraseña";
-            this.Txtpass.Click += new System.EventHandler(this.Txtpass_KeyDown);
-            this.Txtpass.Enter += new System.EventHandler(this.Txtpass_Enter);
-            this.Txtpass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txtpass_KeyDown);
-            this.Txtpass.Leave += new System.EventHandler(this.Txtpass_Leave);
+            this.Txtpass.UseSystemPasswordChar = true;
             // 
             // btnChange
             // 

@@ -55,12 +55,9 @@ namespace Clinica_Istea_program
             this.Txtdesc.Location = new System.Drawing.Point(275, 86);
             this.Txtdesc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txtdesc.Name = "Txtdesc";
+            this.Txtdesc.PlaceholderText = "Descripcion";
             this.Txtdesc.Size = new System.Drawing.Size(357, 20);
             this.Txtdesc.TabIndex = 20;
-            this.Txtdesc.Text = "Descripcion";
-            this.Txtdesc.Enter += new System.EventHandler(this.Txtcant_Enter);
-            this.Txtdesc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txtdesc_KeyDown);
-            this.Txtdesc.Leave += new System.EventHandler(this.Txtcant_Leave);
             // 
             // BtnMinimizar
             // 
@@ -107,12 +104,9 @@ namespace Clinica_Istea_program
             this.Txtnombre.Location = new System.Drawing.Point(275, 52);
             this.Txtnombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txtnombre.Name = "Txtnombre";
+            this.Txtnombre.PlaceholderText = "Nombre";
             this.Txtnombre.Size = new System.Drawing.Size(357, 20);
             this.Txtnombre.TabIndex = 13;
-            this.Txtnombre.Text = "Nombre";
-            this.Txtnombre.Enter += new System.EventHandler(this.Txtmaterial_Enter);
-            this.Txtnombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txtnombre_KeyDown);
-            this.Txtnombre.Leave += new System.EventHandler(this.Txtmaterial_Leave);
             // 
             // btnAdd
             // 

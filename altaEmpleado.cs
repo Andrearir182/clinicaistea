@@ -21,6 +21,8 @@ namespace Clinica_Istea_program
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+            gestionPersonal gp = new gestionPersonal();
+            gp.Show();
         }
 
         private void BtnMinimizar_Click(object sender, EventArgs e)
@@ -32,19 +34,19 @@ namespace Clinica_Istea_program
             if(ClinicaDBContext.Empleados.Where(x=>x.Matricula== txtMatricula.Text || x.Dni == txtDNI.Text).Any()) {
                 MessageBox.Show("El empleado ya existe en el sistema");
             }
-            if (txtNombre.Text == "" || txtNombre.Text=="Nombre")
+            if (txtNombre.Text == "" || txtNombre.Text=="")
             {
                 MessageBox.Show("Nombre debe contener un valor");
             }
-            else if (txtApellido.Text == "" || txtApellido.Text == "Apellido")
+            else if (txtApellido.Text == "" || txtApellido.Text == "")
             {
                 MessageBox.Show("Apellido debe contener un valor");
             }
-            else if (txtMatricula.Text == "" || txtMatricula.Text == "Matricula")
+            else if (txtMatricula.Text == "" || txtMatricula.Text == "")
             {
                 MessageBox.Show("Matricula debe contener un valor");
             }
-            else if (txtDNI.Text == "" || txtDNI.Text == "DNI")
+            else if (txtDNI.Text == "" || txtDNI.Text == "")
             {
                 MessageBox.Show("DNI debe contener un valor");
             }
@@ -69,9 +71,11 @@ namespace Clinica_Istea_program
                     Provincia = txtProvincia.Text
                 });
                 MessageBox.Show("Empleado agregado con exito");
+                
                 this.Close();
+                gestionPersonal gp = new gestionPersonal();
+                gp.Show();
             }
-           
         }
         public static AutoCompleteStringCollection Autocomplete(string texto)
         {
@@ -83,43 +87,7 @@ namespace Clinica_Istea_program
             return coleccion;
         }
 
-        private void Txt_Format_Nombre(object sender, EventArgs e){Txt_Format(txtNombre, "Nombre");}
-        private void Txt_Format_Apellido(object sender, EventArgs e) { Txt_Format(txtApellido, "Apellido"); }
-        private void Txt_Format_Dni(object sender, EventArgs e) { Txt_Format(txtDNI, "DNI"); }
-        private void Txt_Format_Matricula(object sender, EventArgs e) { Txt_Format(txtMatricula, "Matricula"); }
-        private void Txt_Format_Telefono(object sender, EventArgs e) { Txt_Format(txtTelefono, "Telefono"); }
-        private void Txt_Format_Email(object sender, EventArgs e) { Txt_Format(txtEmail, "Email"); }
-        private void Txt_Format_Calle(object sender, EventArgs e) { Txt_Format(txtCalle, "Calle"); }
-        private void Txt_Format_Localidad(object sender, EventArgs e) { Txt_Format(txtLocalidad, "Localidad"); }
-        private void Txt_Format_Provincia(object sender, EventArgs e) { Txt_Format(txtProvincia, "Provincia"); }
 
-        private void Txt_KeyDown_Nombre(object sender, EventArgs e) { Txt_KeyDown(txtNombre, "Nombre"); }
-        private void Txt_KeyDown_Apellido(object sender, EventArgs e) { Txt_KeyDown(txtApellido, "Apellido"); }
-        private void Txt_KeyDown_Dni(object sender, EventArgs e) { Txt_KeyDown(txtDNI, "DNI"); }
-        private void Txt_KeyDown_Matricula(object sender, EventArgs e) { Txt_KeyDown(txtMatricula, "Matricula"); }
-        private void Txt_KeyDown_Telefono(object sender, EventArgs e) { Txt_KeyDown(txtTelefono, "Telefono"); }
-        private void Txt_KeyDown_Email(object sender, EventArgs e) { Txt_KeyDown(txtEmail, "Email"); }
-        private void Txt_KeyDown_Calle(object sender, EventArgs e) { Txt_KeyDown(txtCalle, "Calle"); }
-        private void Txt_KeyDown_Localidad(object sender, EventArgs e) { Txt_KeyDown(txtLocalidad, "Localidad"); }
-        private void Txt_KeyDown_Provincia(object sender, EventArgs e) { Txt_KeyDown(txtProvincia, "Provincia"); }
-
-
-        private void Txt_Format(Control c, string texto)
-        {
-            if (c.Text == "")
-            {
-                c.Text = texto;
-                c.ForeColor = Color.Silver;
-            }
-        }
-        private void Txt_KeyDown(Control c, string texto)
-        {
-            if (c.Text == texto)
-            {
-                c.Text = "";
-                c.ForeColor = Color.LightGray;
-            }
-        }
 
     }
 }

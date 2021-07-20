@@ -39,22 +39,6 @@ namespace Clinica_Istea_program
             this.Close();
         }
 
-        private void Txtuser_Enter(object sender, EventArgs e)
-        {
-            FormatTextUser();
-        }
-        private void Txtuser_Leave(object sender, EventArgs e)
-        {
-            FormatTextUser();
-        }
-        private void Txtquest_Enter(object sender, EventArgs e)
-        {
-            FormateTextPass();
-        }
-        private void Txtquest_Leave(object sender, EventArgs e)
-        {
-            FormateTextPass();
-        }
 
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
@@ -66,39 +50,7 @@ namespace Clinica_Istea_program
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void FormatTextUser()
-        {
-            if (Txtuser.Text == "")
-            {
-                Txtuser.Text = "Usuario";
-                Txtuser.ForeColor = Color.Silver;
-            }
-        }
-        private void FormateTextPass()
-        {
-            if (Txtquest.Text == "")
-            {
-                Txtquest.Text = "¿Cual es el nombre de su primera mascota?";
-                Txtquest.ForeColor = Color.Silver;//LightGray
-            }
-        }
 
-        private void Txtuser_KeyDown(object sender, EventArgs e)
-        {
-            if (Txtuser.Text == "Usuario")
-            {
-                Txtuser.Text = "";
-                Txtuser.ForeColor = Color.LightGray;
-            }
-        }
-
-        private void Txtquest_KeyDown(object sender, EventArgs e)
-        {
-            if (Txtquest.Text == "¿Cual es el nombre de su primera mascota?")
-            {
-                Txtquest.Text = "";
-                Txtquest.ForeColor = Color.LightGray;
-            }
-        }
+     
     }
 }

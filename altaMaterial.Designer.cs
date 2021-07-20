@@ -55,13 +55,9 @@ namespace Clinica_Istea_program
             this.Txtcant.Location = new System.Drawing.Point(275, 86);
             this.Txtcant.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txtcant.Name = "Txtcant";
+            this.Txtcant.PlaceholderText = "Cantidad";
             this.Txtcant.Size = new System.Drawing.Size(357, 20);
             this.Txtcant.TabIndex = 20;
-            this.Txtcant.Text = "Cantidad";
-            this.Txtcant.Enter += new System.EventHandler(this.Txtcant_Enter);
-            this.Txtcant.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txtcant_KeyDown);
-            this.Txtcant.KeyUp += new System.Windows.Forms.KeyEventHandler(this.validarSoloNumeros);
-            this.Txtcant.Leave += new System.EventHandler(this.Txtcant_Leave);
             // 
             // BtnMinimizar
             // 
@@ -108,12 +104,9 @@ namespace Clinica_Istea_program
             this.Txtprod.Location = new System.Drawing.Point(275, 52);
             this.Txtprod.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txtprod.Name = "Txtprod";
+            this.Txtprod.PlaceholderText = "Producto";
             this.Txtprod.Size = new System.Drawing.Size(357, 20);
             this.Txtprod.TabIndex = 13;
-            this.Txtprod.Text = "Producto";
-            this.Txtprod.Enter += new System.EventHandler(this.Txtmaterial_Enter);
-            this.Txtprod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txtmaterial_KeyDown);
-            this.Txtprod.Leave += new System.EventHandler(this.Txtmaterial_Leave);
             // 
             // btnAdd
             // 
@@ -176,7 +169,7 @@ namespace Clinica_Istea_program
             this.label2.TabIndex = 16;
             this.label2.Text = "____________________________________________________________________";
             // 
-            // detalleDepartamentoNuevo
+            // altaMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -193,7 +186,7 @@ namespace Clinica_Istea_program
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "detalleDepartamentoNuevo";
+            this.Name = "altaMaterial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimizar)).EndInit();

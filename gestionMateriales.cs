@@ -16,7 +16,7 @@ namespace Clinica_Istea_program
 
             InitializeComponent();
 
-            foreach (string s in ClinicaDBContext.GetMateriales()) { 
+            foreach (string s in ClinicaDBContext.Especialidades.Select(x => x.Nombre).ToList()) { 
                 comboBoxBuscar.Items.Add(s);
             }
             while (this.flowLayoutPanelDetalleDep.Controls.Count > 0)
@@ -70,9 +70,10 @@ namespace Clinica_Istea_program
 
                 void btnVer_Click(object sender, EventArgs e)
                 {
-                    Empleado x = ClinicaDBContext.getEmpleado(Convert.ToInt32(b.Name));
-                    detalleEmpleado n = new detalleEmpleado(x);
-                    n.Show();
+                    Especialidad x = ClinicaDBContext.getEspecialidad(b.Name);
+                    detalleDepartamento d = new detalleDepartamento(x);
+                    d.Show();
+                    this.Close();
                 }
             }
         }
@@ -84,8 +85,8 @@ namespace Clinica_Istea_program
             }
 
             string Texto = comboBoxBuscar.Text.ToUpper();
-            List<Empleado> EmpleadosSeleccionados = ClinicaDBContext.Empleados.Where(z => (z.Nombre != null && z.Nombre.ToUpper().Contains(Texto)) || (z.Apellido != null && z.Apellido.ToUpper().Contains(Texto)) || (z.Dni != null && z.Dni.ToUpper().Contains(Texto)) || (z.Matricula != null && z.Matricula.ToUpper().Contains(Texto))).ToList();
-            foreach (Especialidad d in ClinicaDBContext.Especialidades)
+            List<Especialidad> EspecialidadesSeleccion = ClinicaDBContext.Especialidades.Where(z => (z.Nombre != null && z.Nombre.ToUpper().Contains(Texto))).ToList();
+            foreach (Especialidad d in EspecialidadesSeleccion)
             {
                 FlowLayoutPanel fp1 = new FlowLayoutPanel() { FlowDirection = System.Windows.Forms.FlowDirection.LeftToRight, Size = new System.Drawing.Size(398, 20) };
                 fp1.Controls.Add(new Label()

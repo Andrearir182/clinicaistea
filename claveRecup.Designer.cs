@@ -55,12 +55,9 @@ namespace Clinica_Istea_program
             this.Txtquest.Location = new System.Drawing.Point(275, 86);
             this.Txtquest.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txtquest.Name = "Txtquest";
+            this.Txtquest.PlaceholderText = "¿Cual es el nombre de su primera mascota?";
             this.Txtquest.Size = new System.Drawing.Size(357, 20);
             this.Txtquest.TabIndex = 20;
-            this.Txtquest.Text = "¿Cual es el nombre de su primera mascota?";
-            this.Txtquest.Enter += new System.EventHandler(this.Txtquest_Enter);
-            this.Txtquest.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txtquest_KeyDown);
-            this.Txtquest.Leave += new System.EventHandler(this.Txtquest_Leave);
             // 
             // BtnMinimizar
             // 
@@ -107,12 +104,9 @@ namespace Clinica_Istea_program
             this.Txtuser.Location = new System.Drawing.Point(275, 52);
             this.Txtuser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txtuser.Name = "Txtuser";
+            this.Txtuser.PlaceholderText = "Usuario";
             this.Txtuser.Size = new System.Drawing.Size(357, 20);
             this.Txtuser.TabIndex = 13;
-            this.Txtuser.Text = "Usuario";
-            this.Txtuser.Enter += new System.EventHandler(this.Txtuser_Enter);
-            this.Txtuser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txtuser_KeyDown);
-            this.Txtuser.Leave += new System.EventHandler(this.Txtuser_Leave);
             // 
             // btnRecup
             // 
