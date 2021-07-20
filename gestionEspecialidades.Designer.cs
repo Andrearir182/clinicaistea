@@ -38,7 +38,7 @@ namespace Clinica_Istea_program
             this.flowLayoutPanelDetalleDep = new System.Windows.Forms.FlowLayoutPanel();
             this.BtnMinimizar = new System.Windows.Forms.PictureBox();
             this.BtnCerrar = new System.Windows.Forms.PictureBox();
-            this.downloadCSV = new System.Windows.Forms.Button();
+            this.loadCSV = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimizar)).BeginInit();
@@ -77,7 +77,7 @@ namespace Clinica_Istea_program
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
-            this.panel1.Controls.Add(this.downloadCSV);
+            this.panel1.Controls.Add(this.loadCSV);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -152,21 +152,22 @@ namespace Clinica_Istea_program
             this.BtnCerrar.TabStop = false;
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
-            // downloadCSV
+            // loadCSV
             // 
-            this.downloadCSV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
-            this.downloadCSV.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
-            this.downloadCSV.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.downloadCSV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(118)))), ((int)(((byte)(126)))));
-            this.downloadCSV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.downloadCSV.ForeColor = System.Drawing.Color.LightGray;
-            this.downloadCSV.Location = new System.Drawing.Point(40, 199);
-            this.downloadCSV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.downloadCSV.Name = "downloadCSV";
-            this.downloadCSV.Size = new System.Drawing.Size(136, 30);
-            this.downloadCSV.TabIndex = 37;
-            this.downloadCSV.Text = "CARGAR CSV";
-            this.downloadCSV.UseVisualStyleBackColor = false;
+            this.loadCSV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
+            this.loadCSV.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
+            this.loadCSV.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.loadCSV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(118)))), ((int)(((byte)(126)))));
+            this.loadCSV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loadCSV.ForeColor = System.Drawing.Color.LightGray;
+            this.loadCSV.Location = new System.Drawing.Point(40, 199);
+            this.loadCSV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.loadCSV.Name = "loadCSV";
+            this.loadCSV.Size = new System.Drawing.Size(136, 30);
+            this.loadCSV.TabIndex = 37;
+            this.loadCSV.Text = "CARGAR CSV";
+            this.loadCSV.UseVisualStyleBackColor = false;
+            this.loadCSV.Click += new System.EventHandler(this.loadCSV_Click);
             // 
             // gestionEspecialidades
             // 
@@ -204,6 +205,6 @@ namespace Clinica_Istea_program
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox BtnMinimizar;
         private System.Windows.Forms.PictureBox BtnCerrar;
-        private System.Windows.Forms.Button downloadCSV;
+        private System.Windows.Forms.Button loadCSV;
     }
 }

@@ -5,6 +5,7 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 
 namespace Clinica_Istea_program
 {
@@ -189,5 +190,20 @@ namespace Clinica_Istea_program
         }
 
 
+
+        private void loadCSV_Click(object sender, EventArgs e)
+        {
+            string path = @"C:\CSVEspecialidades.csv";
+            if (File.Exists(path))
+            {
+                foreach (string x in File.ReadAllText(path).Split("\n"))
+                {
+                    ClinicaDBContext.addEspecialidad(x.Split(";")[0], x.Split(";")[1]);
+                }
+                MessageBox.Show("Datos cargados con exito!");
+            } else {
+                MessageBox.Show(@"Debe cargar un archivo CSVEspecialdiades.csv en la ruta C:\ con formato nombre;descripcion");
+            }
+        }
     }
 }
