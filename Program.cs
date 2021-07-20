@@ -19,7 +19,7 @@ namespace Clinica_Istea_program
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             ingreso PantallaIngreso = new ingreso();
-            gestionPersonal prueba = new gestionPersonal();
+            //gestionPersonal prueba = new gestionPersonal();
 
             //Especialidad e=ClinicaDBContext.Especialidades.Where(x => x.Nombre == "Cardiologia").FirstOrDefault();
             //detalleDepartamento d = new detalleDepartamento(e);

@@ -22,6 +22,7 @@ namespace Clinica_Istea_program
         private void Cerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
 
         private void Minimizar_Click(object sender, EventArgs e)

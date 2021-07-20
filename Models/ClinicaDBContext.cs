@@ -183,12 +183,11 @@ namespace Clinica_Istea_program.Models
             return longitudTextoDetDep;
         }
 
-        public static bool existeMaterial(string nombre) {
-            return Especialidades.Where(x => x.Nombre == nombre).Any();
+        public static bool existeMaterial(string nombre , Especialidad esp) {
+            return Materiales.Where(x => x.Producto == nombre && x.Dep == esp).Any();
         }
-        public static void addMaterial(string dept, string nombre, int cantidad) {
-            Especialidad dpt = new Especialidad() { Nombre = dept };
-            Materiales.Add(new Material() {Dep=dpt,Producto= nombre, Cantidad=cantidad });
+        public static void addMaterial(string producto, int cantidad, Especialidad esp) {
+            Materiales.Add(new Material() {Dep=esp,Producto= producto, Cantidad=cantidad });
         }
         public static bool existeEspecialidad(string nombre)
         {

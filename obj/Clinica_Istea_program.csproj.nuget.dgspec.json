@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GitHub\\clinicaistea\\Clinica_Istea_program.csproj": {}
+    "C:\\Users\\ASUS\\Downloads\\clinicaistea-main (1)\\clinicaistea-main\\Clinica_Istea_program.csproj": {}
   },
   "projects": {
-    "C:\\GitHub\\clinicaistea\\Clinica_Istea_program.csproj": {
+    "C:\\Users\\ASUS\\Downloads\\clinicaistea-main (1)\\clinicaistea-main\\Clinica_Istea_program.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GitHub\\clinicaistea\\Clinica_Istea_program.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Downloads\\clinicaistea-main (1)\\clinicaistea-main\\Clinica_Istea_program.csproj",
         "projectName": "Clinica_Istea_program",
-        "projectPath": "C:\\GitHub\\clinicaistea\\Clinica_Istea_program.csproj",
+        "projectPath": "C:\\Users\\ASUS\\Downloads\\clinicaistea-main (1)\\clinicaistea-main\\Clinica_Istea_program.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\GitHub\\clinicaistea\\obj\\",
+        "outputPath": "C:\\Users\\ASUS\\Downloads\\clinicaistea-main (1)\\clinicaistea-main\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -57,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
