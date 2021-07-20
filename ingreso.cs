@@ -1,6 +1,5 @@
 ﻿using Clinica_Istea_program.Models;
 using System;
-using System.Drawing;
 using System.Windows.Forms;
 
 
@@ -13,26 +12,14 @@ namespace Clinica_Istea_program
         {
             InitializeComponent();
         }
-        private void Txtuser_Enter(object sender, EventArgs e)
-        {
-            FormatTextUser();
-        }
-        private void Txtuser_Leave(object sender, EventArgs e)
-        {
-            FormatTextUser();
-        }
-        private void Txtpass_Enter(object sender, EventArgs e)
-        {
-            FormatTextPass();
-        }
-        private void Txtpass_Leave(object sender, EventArgs e)
-        {
-            FormatTextPass();
-        }
+
+
+
 
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
 
         private void BtnMinimizar_Click(object sender, EventArgs e)
@@ -75,43 +62,9 @@ namespace Clinica_Istea_program
             IrclaveRecup();
         }
 
-        private void FormatTextUser()
-        {
-            if (Txtuser.Text == "")
-            {
-                Txtuser.Text = "Usuario";
-                Txtuser.ForeColor = Color.Silver;
-            }
-        }
-        private void FormatTextPass()
-        {
-            if (Txtpass.Text == "")
-            {
-                Txtpass.UseSystemPasswordChar = false;
-                Txtpass.Text = "Contraseña";
-                Txtpass.ForeColor = Color.Silver;//LightGray
 
-            }
-        }
 
-        private void Txtuser_KeyDown(object sender, EventArgs e)
-        {
-            if (Txtuser.Text == "Usuario")
-            {
-                Txtuser.Text = "";
-                Txtuser.ForeColor = Color.LightGray;
-            }
-        }
 
-        private void Txtpass_KeyDown(object sender, EventArgs e)
-        {
-            if (Txtpass.Text == "Contraseña")
-            {
-                Txtpass.Text = "";
-                Txtpass.ForeColor = Color.LightGray;
-                Txtpass.UseSystemPasswordChar = true;
-            }
-        }
 
     }
 }

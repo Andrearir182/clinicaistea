@@ -96,13 +96,9 @@ namespace Clinica_Istea_program
             this.Txtuser.Location = new System.Drawing.Point(270, 52);
             this.Txtuser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txtuser.Name = "Txtuser";
+            this.Txtuser.PlaceholderText = "Usuario";
             this.Txtuser.Size = new System.Drawing.Size(357, 20);
             this.Txtuser.TabIndex = 2;
-            this.Txtuser.Text = "Usuario";
-            this.Txtuser.Click += new System.EventHandler(this.Txtuser_KeyDown);
-            this.Txtuser.Enter += new System.EventHandler(this.Txtuser_Enter);
-            this.Txtuser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txtuser_KeyDown);
-            this.Txtuser.Leave += new System.EventHandler(this.Txtuser_Leave);
             // 
             // label1
             // 
@@ -185,13 +181,10 @@ namespace Clinica_Istea_program
             this.Txtpass.Location = new System.Drawing.Point(270, 86);
             this.Txtpass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txtpass.Name = "Txtpass";
+            this.Txtpass.PlaceholderText = "Contraseña";
             this.Txtpass.Size = new System.Drawing.Size(357, 20);
             this.Txtpass.TabIndex = 10;
-            this.Txtpass.Text = "Contraseña";
-            this.Txtpass.Click += new System.EventHandler(this.Txtpass_KeyDown);
-            this.Txtpass.Enter += new System.EventHandler(this.Txtpass_Enter);
-            this.Txtpass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txtpass_KeyDown);
-            this.Txtpass.Leave += new System.EventHandler(this.Txtpass_Leave);
+            this.Txtpass.UseSystemPasswordChar = true;
             // 
             // ingreso
             // 
